@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>彰濱產業園區廠房廠地｜瑞禾不動產</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;background:#fff;color:#1a2635;line-height:1.75;}
+:root{--p:#1C5739;--pd:#0e3520;--a:#EAB500;--ad:#c99a00;--gm:#2a7a52;--gl:#AFC89D;--bg:#f5f8f6;--bd:#deeae2;--tx:#1a2635;--muted:#5a6a6a;--w:#fff;--r:12px;--sh:0 2px 12px rgba(28,87,57,0.08);--shh:0 10px 32px rgba(28,87,57,0.16);}
+nav{position:sticky;top:0;z-index:200;background:#fff;height:72px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 0 var(--bd),0 2px 12px rgba(0,0,0,0.06);}
+.nav-logo{height:44px;width:auto;display:block;}
+.nav-menu{display:flex;gap:0;list-style:none;}
+.nav-menu a{display:block;padding:8px 13px;color:var(--muted);text-decoration:none;font-size:0.84rem;font-weight:500;border-radius:6px;transition:all .18s;}
+.nav-menu a:hover{color:var(--p);background:var(--bg);}
+.nav-back{display:flex;align-items:center;gap:6px;color:var(--p);text-decoration:none;font-size:0.84rem;font-weight:600;padding:7px 14px;border:1.5px solid var(--bd);border-radius:8px;transition:all .18s;}
+.nav-back:hover{background:var(--p);color:var(--w);border-color:var(--p);}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--muted);border-radius:2px;}
+.hero{background:linear-gradient(140deg,var(--pd) 0%,var(--p) 50%,var(--gm) 100%);color:#fff;padding:72px 5% 64px;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--a);}
+.hero-inner{max-width:860px;}
+.bc{display:flex;align-items:center;gap:8px;font-size:0.74rem;color:rgba(255,255,255,0.5);margin-bottom:16px;}
+.bc a{color:rgba(255,255,255,0.5);text-decoration:none;}.bc a:hover{color:var(--a);}
+.hcounty{display:inline-block;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:0.7rem;font-weight:600;padding:4px 13px;border-radius:50px;margin-bottom:12px;}
+.hero h1{color:#fff;font-size:clamp(1.7rem,4vw,2.8rem);font-weight:800;line-height:1.22;margin-bottom:12px;}
+.hero p{color:rgba(255,255,255,0.72);font-size:0.95rem;max-width:560px;margin-bottom:28px;line-height:1.75;}
+.hbtns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;}
+.btn-a{display:inline-flex;align-items:center;gap:7px;background:var(--a);color:var(--p);font-size:0.9rem;font-weight:800;padding:11px 24px;border-radius:50px;text-decoration:none;box-shadow:0 4px 14px rgba(234,181,0,0.4);transition:transform .2s,box-shadow .2s;}
+.btn-a:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(234,181,0,0.5);}
+.btn-g{display:inline-flex;align-items:center;gap:7px;background:transparent;color:#fff;font-size:0.9rem;font-weight:600;padding:10px 20px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.35);text-decoration:none;transition:all .2s;}
+.btn-g:hover{background:rgba(255,255,255,0.1);border-color:#fff;}
+.hstats{display:flex;gap:0;}
+.hs{padding:14px 28px 14px 0;margin-right:28px;border-right:1px solid rgba(255,255,255,0.14);}
+.hs:last-child{border-right:none;}.hs .hn{display:block;font-size:1.55rem;font-weight:800;color:var(--a);line-height:1;}.hs .hl{font-size:0.68rem;color:rgba(255,255,255,0.65);margin-top:5px;}
+.sec{padding:60px 5%;}.sec.alt{background:var(--bg);}
+.sl{display:inline-block;background:var(--gl);color:var(--p);font-size:0.68rem;font-weight:700;padding:3px 12px;border-radius:50px;letter-spacing:.08em;margin-bottom:8px;}
+.st{font-size:clamp(1.2rem,2.5vw,1.7rem);color:var(--p);font-weight:800;margin-bottom:6px;}
+.dv{width:38px;height:3px;background:var(--a);border-radius:2px;margin:8px 0 24px;}
+.ig{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;}
+.ic{background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:22px 24px;}
+.ic h3{font-size:0.85rem;font-weight:700;color:var(--p);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--a);display:inline-block;}
+.itbl{width:100%;border-collapse:collapse;}
+.itbl tr{border-bottom:1px solid var(--bd);}.itbl tr:last-child{border-bottom:none;}
+.itbl td{padding:8px 4px;font-size:0.84rem;vertical-align:top;}
+.itbl td:first-child{color:var(--muted);font-weight:500;width:90px;white-space:nowrap;}
+.itbl td:last-child{color:var(--tx);font-weight:600;}
+.hn2{color:var(--a);font-weight:800;}
+.intro p{font-size:0.86rem;line-height:1.85;color:var(--tx);margin-bottom:10px;}
+.inlist{font-size:0.86rem;color:var(--tx);padding-left:16px;line-height:2.1;}
+/* 照片區 */
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:180px 180px;gap:7px;border-radius:var(--r);overflow:hidden;margin-bottom:10px;}
+.gi{background:var(--gl);overflow:hidden;position:relative;}
+.gi:first-child{grid-row:1/3;}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+.gi:hover img{transform:scale(1.05);}
+.gph{width:100%;height:100%;background:linear-gradient(135deg,var(--gl),#c8dfc0);}
+.img-credit{font-size:0.68rem;color:var(--muted);margin-bottom:28px;text-align:right;}
+.img-credit a{color:var(--muted);text-decoration:underline;}
+/* 地圖 */
+.map-w{border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);box-shadow:var(--sh);}
+.map-w iframe{display:block;width:100%;height:380px;border:none;}
+.map-note{font-size:0.72rem;color:var(--muted);margin-top:8px;display:flex;align-items:center;gap:5px;}
+.map-note::before{content:'';display:block;width:5px;height:5px;border-radius:50%;background:var(--a);flex-shrink:0;}
+.service-info{margin-top:14px;background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:14px 18px;font-size:0.82rem;color:var(--tx);}
+.service-info strong{color:var(--p);font-weight:700;}
+/* 輪播 */
+.car-w{position:relative;}.car-out{overflow:hidden;border-radius:var(--r);}
+.car-tr{display:flex;gap:16px;transition:transform .42s cubic-bezier(0.4,0,.2,1);will-change:transform;}
+.cc{flex:0 0 calc(33.333% - 11px);background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);box-shadow:var(--sh);transition:box-shadow .22s;}
+.cc:hover{box-shadow:var(--shh);}
+.ci2{height:170px;background:var(--gl);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.ci2 img{width:100%;height:100%;object-fit:cover;display:block;}
+.ci2 .cf{font-size:2rem;opacity:.35;color:var(--p);}
+.cst{position:absolute;top:11px;left:11px;font-size:0.66rem;font-weight:800;padding:3px 10px;border-radius:20px;}
+.ss{background:var(--a);color:var(--p);}.sr{background:#22c55e;color:#fff;}.sd{background:#94a3b8;color:#fff;}
+.cb2{padding:15px 17px 17px;}
+.cb2 h3{font-size:0.9rem;font-weight:700;color:var(--p);margin-bottom:4px;}
+.cloc{font-size:0.74rem;color:var(--gm);font-weight:600;margin-bottom:10px;}
+.csp{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:11px;}
+.cs2{background:var(--bg);border-radius:7px;padding:6px 9px;}
+.cs2 .csl{font-size:0.6rem;color:#888;display:block;}.cs2 .csv{font-size:0.8rem;font-weight:700;color:var(--p);}
+.cpr{font-size:1.1rem;font-weight:800;color:var(--a);margin-bottom:11px;}
+.cpr small{font-size:0.68rem;color:#999;font-weight:500;margin-left:2px;}
+.cbtn{display:block;text-align:center;background:var(--a);color:var(--p);font-weight:800;font-size:0.8rem;padding:9px;border-radius:8px;text-decoration:none;transition:background .18s;}
+.cbtn:hover{background:var(--ad);}
+.cph{flex:0 0 calc(33.333% - 11px);background:#fff;border:1.5px dashed var(--gl);border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 18px;text-align:center;min-height:320px;}
+.cph p{font-size:0.8rem;color:#9ab09a;line-height:1.7;}
+.car-ctrl{display:flex;align-items:center;justify-content:space-between;margin-top:18px;}
+.c-dots{display:flex;gap:6px;}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--gl);cursor:pointer;border:none;transition:all .2s;}
+.dot.on{background:var(--p);width:20px;border-radius:4px;}
+.c-arws{display:flex;gap:7px;}
+.arw{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--bd);background:#fff;color:var(--p);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .18s;font-weight:700;}
+.arw:hover{background:var(--p);color:#fff;border-color:var(--p);}
+/* 窗口 */
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;}
+.ccard{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);box-shadow:var(--sh);text-align:center;transition:transform .22s,box-shadow .22s;text-decoration:none;color:inherit;display:block;}
+.ccard:hover{transform:translateY(-3px);box-shadow:var(--shh);}
+.cpw{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--gl),#c8dfc0);display:flex;align-items:center;justify-content:center;font-size:2.8rem;color:var(--p);}
+.cpw img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+.cbdy{padding:13px 11px 15px;}
+.cnm{font-size:0.95rem;font-weight:700;color:var(--p);margin-bottom:4px;}
+.crl{font-size:0.68rem;color:var(--p);font-weight:600;background:#e8f2ec;display:inline-block;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.cqr{display:flex;flex-direction:column;align-items:center;gap:3px;margin-top:9px;padding-top:9px;border-top:1px solid var(--bd);}
+.cqr-ph{width:70px;height:70px;border-radius:6px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--muted);}
+.cqr img{width:70px;height:70px;border-radius:6px;}
+.cqr span{font-size:0.6rem;color:#06C755;font-weight:700;}
+/* 其他園區 */
+.og{display:flex;gap:8px;flex-wrap:wrap;}
+.pj{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:9px 13px;text-decoration:none;color:inherit;transition:all .18s;display:flex;flex-direction:column;min-width:122px;}
+.pj:hover{background:var(--p);border-color:var(--p);}
+.pj:hover .pjn{color:#fff;}.pj:hover .pjc{color:var(--a);}
+.pjn{font-size:0.82rem;font-weight:700;color:var(--p);line-height:1.3;}
+.pjc{font-size:0.64rem;color:var(--muted);margin-top:2px;}
+.back-btn{display:inline-flex;align-items:center;gap:7px;background:var(--p);color:#fff;font-weight:700;font-size:0.88rem;padding:10px 24px;border-radius:8px;text-decoration:none;margin-top:22px;transition:background .18s;}
+.back-btn:hover{background:var(--gm);}
+footer{background:#0a2516;color:rgba(255,255,255,0.42);text-align:center;padding:20px 5%;font-size:0.76rem;line-height:1.8;}
+footer a{color:var(--gl);text-decoration:none;}footer a:hover{color:var(--a);}
+@media(max-width:900px){.ig{grid-template-columns:1fr;}.gal{grid-template-columns:1fr 1fr;grid-template-rows:150px 150px;}.gi:first-child{grid-row:auto;}.cc,.cph{flex:0 0 calc(50% - 8px);}}
+@media(max-width:640px){.nav-burger{display:flex;}.nav-menu{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:14px 5%;gap:4px;box-shadow:0 8px 24px rgba(0,0,0,0.12);border-top:1px solid var(--bd);}.nav-menu.open{display:flex;}nav{position:relative;}.hstats{flex-wrap:wrap;}.hs{padding:10px 14px 10px 0;margin-right:14px;}.cc,.cph{flex:0 0 100%;}.gal{grid-template-columns:1fr;grid-template-rows:180px 140px 140px;}}
+
+/* ─── REGULATIONS ─── */
+.reg-intro{font-size:0.86rem;color:var(--tm,#5a6a6a);margin-bottom:20px;line-height:1.7;}
+.reg-block{border-radius:10px;padding:20px 24px;margin-bottom:0;background:#f0faf4;border:1px solid #b2dfc2;}
+.reg-block-title{font-size:0.9rem;font-weight:700;color:var(--p,#1C5739);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid currentColor;display:inline-block;}
+.reg-list{padding-left:18px;font-size:0.84rem;line-height:2;}
+.reg-list li{color:var(--text,#1a2635);}
+.reg-note{font-size:0.76rem;color:var(--tm,#5a6a6a);margin-top:12px;line-height:1.6;border-top:1px dashed #ddd;padding-top:10px;}
+.reg-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin-top:8px;}
+.reg-table th{background:var(--p,#1C5739);color:#fff;padding:8px 10px;text-align:left;font-size:0.78rem;}
+.reg-table td{padding:7px 10px;border-bottom:1px solid #e8f0eb;vertical-align:top;}
+.reg-table tr:nth-child(even) td{background:#f8fbf9;}
+</style>
+</head>
+<body>
+<nav id="top">
+  <a href="index_main.html"><img src="logo.png" alt="瑞禾不動產" class="nav-logo"></a>
+  <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="nm">
+    <li><a href="#park-info">園區資訊</a></li>
+    <li><a href="#park-map">園區位置</a></li>
+    <li><a href="#carousel">物件展示</a></li>
+    <li><a href="#contacts">負責窗口</a></li>
+    <li><a href="#other-parks">其他園區</a></li>
+  </ul>
+  <a href="index_main.html" class="nav-back">← 返回首頁</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="bc"><a href="index_main.html">首頁</a><span>›</span><span>彰化縣</span><span>›</span><span>彰濱產業園區</span></div>
+    <div class="hcounty">彰化縣・鹿港鎮/線西鄉/伸港鄉</div>
+    <h1>彰濱產業園區<br>廠房・廠地 買賣租賃</h1>
+    <p>台灣面積最大工業區，由北而南分線西、崙尾、鹿港三大區。Google台灣資料中心、台灣玻璃等指標企業進駐，產業聚落效益顯著。設廠用地2,078公頃。</p>
+    <div class="hbtns">
+      <a href="#carousel" class="btn-a">查看可用物件</a>
+      <a href="#contacts" class="btn-g">聯絡負責窗口</a>
+    </div>
+    <div class="hstats">
+      <div class="hs"><span class="hn">3,643</span><span class="hl">公頃・開發面積</span></div>
+      <div class="hs"><span class="hn">959</span><span class="hl">家・廠商進駐</span></div>
+      <div class="hs"><span class="hn">彰化</span><span class="hl">所在縣市</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ① 園區基本資訊 -->
+<section class="sec" id="park-info">
+  <span class="sl">PARK INFORMATION</span>
+  <h2 class="st">園區基本資訊</h2>
+  <div class="dv"></div>
+
+    <div class="gal">
+    <div class="gi"><img src="zhangbin-2.png" alt="彰濱產業園區入口大門" loading="lazy"></div>
+    <div class="gi"><img src="zhangbin-1.png" alt="彰濱產業園區服務中心" loading="lazy"></div>
+    <div class="gi"><img src="zhangbin-3.png" alt="彰濱產業園區區域圖" loading="lazy"></div>
+    <div class="gi"><img src="zhangbin-4.png" alt="彰濱產業園區配置圖" loading="lazy"></div>
+    <div class="gi"><div class="gph"></div></div>
+  </div>
+  <p class="img-credit">圖片來源：<a href="https://land.bip.gov.tw" target="_blank" rel="noopener">台灣工業用地供給與服務資訊網</a></p>
+
+  <div class="ig">
+    <div>
+      <div class="ic" style="margin-bottom:18px;">
+        <h3>基本資料</h3>
+        <table class="itbl">
+          <tr><td>全名</td><td>彰濱產業園區</td></tr>
+          <tr><td>位置</td><td>彰化縣 鹿港鎮/線西鄉/伸港鄉</td></tr>
+          <tr><td>總面積</td><td><span class="hn2">3,643 公頃</span></td></tr>
+          <tr><td>設廠用地</td><td>2,078 公頃</td></tr>
+          <tr><td>廠商家數</td><td><span class="hn2">約 959 家</span></td></tr>
+          <tr><td>開發完成</td><td>民國68年（1979年）</td></tr>
+          <tr><td>土地分區</td><td>綜合性</td></tr>
+          <tr><td>管理單位</td><td>經濟部產業園區管理局臺中分局</td></tr>
+          <tr><td>服務中心</td><td>經濟部產業園區管理局彰濱產業園區服務中心</td></tr>
+          <tr><td>中心地址</td><td>彰化縣鹿港鎮鹿工路2號</td></tr>
+          <tr>D-781-0211</td></tr>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="ic" style="margin-bottom:18px;">
+        <h3>交通區位</h3>
+        <div class="intro"><p>台61西濱快速道路貫穿南北，南北長約12km，東西寬約3.5-4.5km。鹿港區有鹿安橋與鹿工路聯絡市區，陸路物流便捷，近台灣海峽有利海運佈局。</p></div>
+      </div>
+      <div class="ic">
+        <h3>主要聯外道路</h3>
+        <div class="intro"><p>台61線西濱快速道路；台1線；台17線；南北長約12km</p></div>
+        <h3 style="margin-top:16px;">主要產業類型</h3>
+        <ul class="inlist"><li>金屬製品</li><li>化學原材料</li><li>基本金屬</li><li>電力供應</li><li>物流</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ③ 進駐規範 -->
+<section class="sec" id="regulations">
+  <span class="sl">REGULATIONS</span>
+  <h2 class="st">進駐規範</h2>
+  <div class="dv"></div>
+  <p class="reg-intro">依主管機關公告，本園區產業用地之容許或限制引進產業類別如下。進駐前請詳閱相關規定，或洽本公司窗口確認。</p>
+
+    <div class="reg-note" style="margin-bottom:16px;">彰濱產業園區依各子區性質不同，進駐規範有所差異，以下依區域分列說明。</div>
+
+    <div class="reg-block" style="margin-bottom:18px;">
+      <div class="reg-block-title">🚫 線西區產業用地（一）— 不容許引進產業類別</div>
+      <ol class="reg-list">
+        <li>金屬冶煉工業（含電弧爐煉鋼）</li>
+        <li>煉油工業</li>
+        <li>石油化學工業</li>
+        <li>紙漿工業</li>
+        <li>水泥製造業</li>
+        <li>農藥原體製造工業</li>
+        <li>煉焦工業</li>
+        <li>洗染料及其中間體製造工業</li>
+        <li>皮革工業</li>
+        <li>造紙工業</li>
+        <li>酸鹼工業</li>
+        <li>染整工業</li>
+        <li>表面處理工業（專門從事表面處理者）</li>
+        <li>有害廢料處理業</li>
+      </ol>
+    </div>
+
+    <div class="reg-block" style="margin-bottom:18px;">
+      <div class="reg-block-title">🚫 鹿港區一般設廠用地 — 不容許引進產業類別</div>
+      <ol class="reg-list">
+        <li>金屬冶煉工業（含電弧爐煉鋼）</li>
+        <li>煉油工業</li>
+        <li>石油化學工業</li>
+        <li>紙漿工業</li>
+        <li>水泥製造業</li>
+        <li>農業原體製造工業</li>
+        <li>煉焦工業</li>
+        <li>染顏料及其中間體製造工業</li>
+        <li>皮革工業</li>
+        <li>造紙工業</li>
+        <li>酸鹼工業</li>
+        <li>表面處理工業</li>
+        <li>有害廢料處理業</li>
+      </ol>
+    </div>
+
+    <div class="reg-block" style="margin-bottom:18px;">
+      <div class="reg-block-title">✅ 鹿港西二區金屬表面處理專業區（二期）— 容許引進產業類別</div>
+      <ol class="reg-list">
+        <li>金屬表面處理業（表面磨光、電鍍、鍍著、塗覆、烤漆、噴漆、染色、壓花、發藍、上釉及其他化學處理；塑膠製品表面電鍍亦歸入本類）</li>
+        <li>金屬熱處理業（滲碳、滲氣、化學蒸鍍或物理蒸鍍等冶金原理進行表面處理，或以淬火、退火、回火等方式改善組織或物理性質）</li>
+        <li>化學製品製造業（產品供金屬表面處理業或金屬熱處理業使用者）</li>
+        <li>基本化學材料製造業（產品供金屬表面處理業或金屬熱處理業使用者）</li>
+      </ol>
+    </div>
+
+    <div class="reg-block" style="margin-bottom:18px;">
+      <div class="reg-block-title">🚫 崙尾區產業用地（一）— 不容許引進產業類別</div>
+      <ol class="reg-list">
+        <li>金屬冶煉工業（含電弧爐煉鋼）</li>
+        <li>煉油工業</li>
+        <li>石油化學工業</li>
+        <li>紙漿工業</li>
+        <li>水泥製造業</li>
+        <li>農藥原體製造工業</li>
+        <li>煉焦工業</li>
+        <li>洗染料及其中間體製造工業</li>
+        <li>皮革工業</li>
+        <li>造紙工業</li>
+        <li>酸鹼工業</li>
+        <li>染整工業</li>
+        <li>表面處理工業（專門從事表面處理者）</li>
+        <li>有害廢料處理業</li>
+      </ol>
+    </div>
+
+    <div class="reg-block">
+      <div class="reg-block-title">✅ 崙尾西一區金屬表面處理專業區 — 容許引進產業類別</div>
+      <ol class="reg-list">
+        <li>金屬表面處理業（表面磨光、電鍍、鍍著、塗覆、烤漆、噴漆、染色、壓花、發藍、上釉及其他化學處理；塑膠製品表面電鍍亦歸入本類）</li>
+        <li>金屬熱處理業（滲碳、滲氣、化學蒸鍍或物理蒸鍍等冶金原理進行表面處理，或以淬火、退火、回火等方式改善組織或物理性質）</li>
+        <li>化學製品製造業（產品供金屬表面處理業或金屬熱處理業使用者）</li>
+        <li>基本化學材料製造業（產品供金屬表面處理業或金屬熱處理業使用者）</li>
+      </ol>
+    </div>
+
+</section>
+
+<!-- ② 園區位置（Google 地圖） -->
+<section class="sec alt" id="park-map">
+  <span class="sl">LOCATION</span>
+  <h2 class="st">園區位置</h2>
+  <div class="dv"></div>
+  <div class="map-w">
+    <iframe src="https://maps.google.com/maps?q=%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E8%B7%AF2%E8%99%9F&output=embed&hl=zh-TW&z=16" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="經濟部產業園區管理局彰濱產業園區服務中心位置"></iframe>
+  </div>
+  <div class="service-info">
+    <strong>服務中心：</strong>經濟部產業園區管理局彰濱產業園區服務中心<br>
+    <strong>地址：</strong>彰化縣鹿港鎮鹿工路2號&nbsp;&nbsp;<a href="https://www.google.com/maps/search/%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E9%B9%BF%E5%B7%A5%E8%B7%AF2%E8%99%9F" target="_blank" rel="noopener" style="color:var(--p);font-size:0.8rem;font-weight:600;">在 Google Maps 中開啟 ↗</a><br>
+    <strong>電話：</strong>04-7810211&nbsp;&nbsp;<strong>傳真：</strong>04-7810217
+  </div>
+</section>
+
+<!-- ③ 物件輪播 -->
+<section class="sec" id="carousel">
+  <span class="sl">LISTINGS</span>
+  <h2 class="st">園區及周邊物件</h2>
+  <div class="dv"></div>
+  <div class="car-w">
+    <div class="car-out">
+      <div class="car-tr" id="ct">
+        <div class="cc">
+          <div class="ci2"><span class="cf">▣</span><span class="cst ss">出售中</span></div>
+          <div class="cb2">
+            <h3>【物件名稱】</h3>
+            <div class="cloc">彰化縣 鹿港鎮/線西鄉/伸港鄉</div>
+            <div class="csp">
+              <div class="cs2"><span class="csl">土地面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs2"><span class="csl">建物面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs2"><span class="csl">物件類型</span><span class="csv">廠房整棟</span></div>
+              <div class="cs2"><span class="csl">樓層</span><span class="csv">【樓層】</span></div>
+            </div>
+            <div class="cpr">NT$ 【金額】<small>元</small></div>
+            <a href="#contacts" class="cbtn">詢問此物件</a>
+          </div>
+        </div>
+        <div class="cc">
+          <div class="ci2"><span class="cf">▣</span><span class="cst sr">招租中</span></div>
+          <div class="cb2">
+            <h3>【物件名稱】</h3>
+            <div class="cloc">彰化縣 鹿港鎮/線西鄉/伸港鄉</div>
+            <div class="csp">
+              <div class="cs2"><span class="csl">土地面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs2"><span class="csl">建物面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs2"><span class="csl">物件類型</span><span class="csv">【類型】</span></div>
+              <div class="cs2"><span class="csl">月租金</span><span class="csv">面議</span></div>
+            </div>
+            <div class="cpr">月租 NT$ 【金額】<small>/月</small></div>
+            <a href="#contacts" class="cbtn">詢問此物件</a>
+          </div>
+        </div>
+        <div class="cph"><p>更多物件即將上架<br>歡迎致電詢問未公開物件</p></div>
+        <div class="cph"><p>客製需求歡迎告知<br>我們協助尋找<br>適合廠房廠地</p></div>
+      </div>
+    </div>
+    <div class="car-ctrl">
+      <div class="c-dots" id="cd"></div>
+      <div class="c-arws"><button class="arw" id="cp">‹</button><button class="arw" id="cn">›</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 負責窗口 -->
+<section class="sec alt" id="contacts">
+  <span class="sl">CONTACT WINDOW</span>
+  <h2 class="st">負責窗口</h2>
+  <div class="dv"></div>
+  <div class="cg">
+        <a href="person-zeng.html" class="ccard">
+          <div class="cpw">▣</div>
+          <div class="cbdy">
+            <div class="cnm">曾甄茹</div>
+            <div class="crl">業務經理</div>
+            <div class="cqr"><div class="cqr-ph">LINE</div><span>LINE 加好友</span></div>
+          </div>
+        </a>
+        <a href="person-luo.html" class="ccard">
+          <div class="cpw">▣</div>
+          <div class="cbdy">
+            <div class="cnm">羅長庚</div>
+            <div class="crl">業務經理</div>
+            <div class="cqr"><div class="cqr-ph">LINE</div><span>LINE 加好友</span></div>
+          </div>
+        </a>
+        <a href="person-chen.html" class="ccard">
+          <div class="cpw">▣</div>
+          <div class="cbdy">
+            <div class="cnm">陳仁奕</div>
+            <div class="crl">業務經理</div>
+            <div class="cqr"><div class="cqr-ph">LINE</div><span>LINE 加好友</span></div>
+          </div>
+        </a></div>
+</section>
+
+<!-- ⑤ 其他園區 -->
+<section class="sec" id="other-parks">
+  <span class="sl">OTHER PARKS</span>
+  <h2 class="st">其他產業園區</h2>
+  <div class="dv"></div>
+  <div class="og">
+    <a href="park-zhunan.html" class="pj"><span class="pjn">竹南產業園區</span><span class="pjc">苗栗縣</span></a>
+    <a href="park-tongluo.html" class="pj"><span class="pjn">銅鑼產業園區</span><span class="pjc">苗栗縣</span></a>
+    <a href="park-toufen.html" class="pj"><span class="pjn">頭份產業園區</span><span class="pjc">苗栗縣</span></a>
+    <a href="park-taichung.html" class="pj"><span class="pjn">台中產業園區</span><span class="pjc">台中市</span></a>
+    <a href="park-dajia.html" class="pj"><span class="pjn">大甲幼獅產業園區</span><span class="pjc">台中市</span></a>
+    <a href="park-taichungport-rel.html" class="pj"><span class="pjn">台中港關連產業園區</span><span class="pjc">台中市</span></a>
+    <a href="park-dali.html" class="pj"><span class="pjn">大里產業園區</span><span class="pjc">台中市</span></a>
+    <a href="park-taichungport-tech.html" class="pj"><span class="pjn">臺中港科技產業園區</span><span class="pjc">台中市</span></a>
+    <a href="park-tanzi.html" class="pj"><span class="pjn">潭子科技產業園區</span><span class="pjc">台中市</span></a>
+    <a href="park-software.html" class="pj"><span class="pjn">台中軟體園區</span><span class="pjc">台中市</span></a>
+    <a href="park-tianzhong.html" class="pj"><span class="pjn">田中產業園區</span><span class="pjc">彰化縣</span></a>
+    <a href="park-fangyuan.html" class="pj"><span class="pjn">芳苑產業園區</span><span class="pjc">彰化縣</span></a>
+    <a href="park-pitou.html" class="pj"><span class="pjn">埤頭產業園區</span><span class="pjc">彰化縣</span></a>
+    <a href="park-fuxing.html" class="pj"><span class="pjn">福興產業園區</span><span class="pjc">彰化縣</span></a>
+    <a href="park-quanxing.html" class="pj"><span class="pjn">全興產業園區</span><span class="pjc">彰化縣</span></a>
+    <a href="park-zhangbin.html" style="pointer-events:none;opacity:.38" class="pj"><span class="pjn">彰濱產業園區</span><span class="pjc">彰化縣</span></a>
+    <a href="park-shetou.html" class="pj"><span class="pjn">社頭織襪產業園區</span><span class="pjc">彰化縣</span></a>
+    <a href="park-nangang.html" class="pj"><span class="pjn">南崗產業園區</span><span class="pjc">南投縣</span></a>
+    <a href="park-zhushan.html" class="pj"><span class="pjn">竹山產業園區</span><span class="pjc">南投縣</span></a>
+</div>
+  <a href="index_main.html" class="back-btn">← 返回主網頁</a>
+</section>
+
+<footer>
+  <p>© 2025 瑞禾不動產經紀股份有限公司（RUIHE Real Estate）・中臺灣工業不動產專業服務</p>
+  <p>臺中市南屯區益豐路四段91號 ｜ Tel: 04-2380-3560 ｜ <a href="index_main.html">回到首頁</a></p>
+</footer>
+<script>
+document.getElementById('burger').addEventListener('click',()=>{document.getElementById('nm').classList.toggle('open');});
+(function(){
+  const tr=document.getElementById('ct');const dt=document.getElementById('cd');
+  if(!tr)return;let cur=0,tmr;
+  function vc(){return window.innerWidth>=900?3:window.innerWidth>=640?2:1;}
+  function tot(){return Math.max(1,tr.children.length-vc()+1);}
+  function mkDots(){dt.innerHTML='';for(let i=0;i<tot();i++){const d=document.createElement('button');d.className='dot'+(i===cur?' on':'');d.addEventListener('click',()=>go(i));dt.appendChild(d);}}
+  function go(i){const t=tot();cur=Math.max(0,Math.min(i,t-1));const w=tr.children[0].offsetWidth+16;tr.style.transform=`translateX(-${cur*w}px)`;dt.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('on',j===cur));}
+  function nxt(){go(cur+1>=tot()?0:cur+1);}function prv(){go(cur-1<0?tot()-1:cur-1);}
+  function sa(){clearInterval(tmr);tmr=setInterval(nxt,4500);}
+  document.getElementById('cn').addEventListener('click',()=>{nxt();sa();});
+  document.getElementById('cp').addEventListener('click',()=>{prv();sa();});
+  tr.addEventListener('mouseenter',()=>clearInterval(tmr));tr.addEventListener('mouseleave',sa);
+  let tx=0;tr.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+  tr.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>50){d>0?nxt():prv();sa();}});
+  window.addEventListener('resize',()=>{mkDots();go(Math.min(cur,tot()-1));});
+  mkDots();sa();
+})();
+</script>
+</body>
+</html>

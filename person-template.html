@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>【姓名】業務經理｜瑞禾不動產</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #FFFFFF; color: #0D0D46; line-height: 1.7; }
+:root {
+  --primary: #1C5739;
+  --accent1: #49882C;
+  --accent2: #EAB500;
+  --accent3: #AFC89D;
+  --text-body: #0D0D46;
+  --white: #FFFFFF;
+  --bg-light: #f6f9f7;
+}
+
+/* ── NAV ── */
+nav { position: sticky; top: 0; z-index: 100; background: var(--primary); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 68px; box-shadow: 0 2px 8px rgba(0,0,0,0.18); }
+.nav-brand { color: var(--white); font-size: 0.95rem; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.nav-brand .tag { background: var(--accent2); color: var(--primary); font-size: 0.68rem; font-weight: 800; padding: 2px 8px; border-radius: 20px; }
+.nav-back { color: rgba(255,255,255,0.82); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+.nav-back:hover { color: var(--accent2); }
+
+/* ── HERO PROFILE ── */
+.profile-hero { background: linear-gradient(140deg, #0e3520 0%, var(--primary) 45%, #2a7a52 100%); padding: 60px 5%; position: relative; overflow: hidden; }
+.profile-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--accent2); }
+.profile-hero-inner { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; max-width: 900px; }
+.profile-photo-wrap { position: relative; flex-shrink: 0; }
+.profile-photo { width: 200px; height: 260px; object-fit: cover; object-position: top; border-radius: 16px; display: block; border: 4px solid rgba(255,255,255,0.2); box-shadow: 0 20px 48px rgba(0,0,0,0.3); }
+.profile-photo-placeholder { width: 200px; height: 260px; border-radius: 16px; background: linear-gradient(160deg, var(--accent3) 0%, #8ab87a 100%); display: flex; align-items: center; justify-content: center; font-size: 5rem; border: 4px solid rgba(255,255,255,0.2); box-shadow: 0 20px 48px rgba(0,0,0,0.3); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.55); margin-bottom: 16px; }
+.breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent2); }
+.breadcrumb span { color: rgba(255,255,255,0.3); }
+.profile-title-tag { display: inline-block; background: var(--accent2); color: var(--primary); font-size: 0.72rem; font-weight: 800; padding: 4px 14px; border-radius: 20px; letter-spacing: 0.06em; margin-bottom: 12px; }
+.profile-name { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 8px; letter-spacing: 0.04em; }
+.profile-role { color: rgba(255,255,255,0.78); font-size: 1rem; font-weight: 500; margin-bottom: 24px; }
+.profile-contacts { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.profile-contact-item { display: flex; align-items: center; gap: 12px; }
+.pci-icon { width: 36px; height: 36px; background: rgba(255,255,255,0.12); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+.pci-text { font-size: 0.92rem; color: rgba(255,255,255,0.88); }
+.pci-text a { color: var(--accent2); text-decoration: none; font-weight: 700; font-size: 1rem; }
+.pci-text a:hover { text-decoration: underline; }
+.profile-cta-group { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-call { display: inline-flex; align-items: center; gap: 8px; background: var(--accent2); color: var(--primary); font-size: 0.95rem; font-weight: 800; padding: 12px 26px; border-radius: 50px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(234,181,0,0.45); }
+.btn-call:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(234,181,0,0.5); }
+.btn-line { display: inline-flex; align-items: center; gap: 8px; background: #06C755; color: #fff; font-size: 0.95rem; font-weight: 700; padding: 12px 24px; border-radius: 50px; text-decoration: none; transition: transform 0.2s; }
+.btn-line:hover { transform: translateY(-2px); }
+
+/* ── QR SECTION ── */
+.qr-block { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 24px; width: fit-content; }
+.qr-block img { width: 120px; height: 120px; border-radius: 10px; background: var(--white); }
+.qr-block-placeholder { width: 120px; height: 120px; border-radius: 10px; background: rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+.qr-block span { font-size: 0.72rem; color: rgba(255,255,255,0.8); font-weight: 600; }
+
+/* ── SPECIALTY ── */
+#specialty { background: var(--white); padding: 64px 5%; }
+.specialty-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.info-card { background: var(--bg-light); border: 1px solid #e4ede8; border-radius: 14px; padding: 28px; }
+.info-card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+.info-card h3 .ic { width: 30px; height: 30px; background: var(--accent3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
+.specialty-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.spec-tag { background: var(--primary); color: var(--white); font-size: 0.85rem; font-weight: 600; padding: 8px 18px; border-radius: 8px; }
+.spec-tag-light { background: #edf5f0; color: var(--primary); font-size: 0.85rem; font-weight: 600; padding: 8px 18px; border-radius: 8px; border: 1px solid var(--accent3); }
+.profile-intro { font-size: 0.95rem; line-height: 1.85; color: var(--text-body); }
+.profile-intro p { margin-bottom: 14px; }
+.profile-intro p:last-child { margin-bottom: 0; }
+
+/* ── PARKS SECTION ── */
+#parks { background: var(--bg-light); padding: 64px 5%; }
+.section-eyebrow { display: inline-block; background: var(--accent3); color: var(--primary); font-size: 0.72rem; font-weight: 700; padding: 3px 13px; border-radius: 20px; letter-spacing: 0.06em; margin-bottom: 8px; }
+.section-title { font-size: clamp(1.3rem, 2.8vw, 1.85rem); color: var(--primary); font-weight: 800; margin-bottom: 6px; }
+.divider { width: 48px; height: 4px; background: var(--accent2); border-radius: 2px; margin: 10px 0 0; }
+.parks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; margin-top: 36px; }
+.park-link-card { background: var(--white); border-radius: 12px; overflow: hidden; border: 1px solid #e4ede8; text-decoration: none; color: inherit; transition: transform 0.22s, box-shadow 0.22s; display: flex; flex-direction: column; }
+.park-link-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(28,87,57,0.12); }
+.plc-header { background: linear-gradient(135deg, var(--primary), #2a7a52); padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; }
+.plc-header h3 { color: var(--white); font-size: 0.95rem; font-weight: 700; }
+.plc-grade { background: var(--accent2); color: var(--primary); font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: 6px; }
+.plc-body { padding: 14px 18px 18px; flex: 1; }
+.plc-meta { display: flex; gap: 12px; margin-bottom: 12px; }
+.plc-meta span { font-size: 0.78rem; color: #777; background: var(--bg-light); padding: 3px 10px; border-radius: 6px; }
+.plc-btn { display: block; text-align: center; background: var(--accent2); color: var(--primary); font-weight: 800; font-size: 0.82rem; padding: 9px; border-radius: 0 0 12px 12px; text-decoration: none; transition: background 0.2s; }
+.plc-btn:hover { background: #d4a300; }
+
+/* ── OTHER TEAM ── */
+#other-team { background: var(--white); padding: 56px 5%; }
+.team-scroll { display: flex; gap: 16px; flex-wrap: wrap; }
+.teammate-card { background: var(--bg-light); border: 1px solid #e4ede8; border-radius: 12px; padding: 16px 18px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 14px; transition: all 0.2s; min-width: 180px; }
+.teammate-card:hover { background: var(--primary); border-color: var(--primary); transform: translateY(-2px); }
+.teammate-card:hover .tm-name { color: var(--white); }
+.teammate-card:hover .tm-role { color: var(--accent2); background: rgba(255,255,255,0.15); }
+.tm-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--accent3); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+.tm-name { font-size: 0.95rem; font-weight: 700; color: var(--primary); }
+.tm-role { font-size: 0.7rem; color: var(--accent1); background: #edf5f0; display: inline-block; padding: 2px 8px; border-radius: 20px; margin-top: 3px; }
+
+/* ── CONTACT CTA ── */
+#cta { background: var(--primary); padding: 64px 5%; text-align: center; }
+#cta h2 { color: var(--white); font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 12px; }
+#cta p { color: rgba(255,255,255,0.75); font-size: 0.95rem; max-width: 480px; margin: 0 auto 36px; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-cta-white { display: inline-flex; align-items: center; gap: 8px; background: var(--white); color: var(--primary); font-size: 1rem; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: transform 0.2s; }
+.btn-cta-white:hover { transform: translateY(-2px); }
+.btn-cta-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--accent2); color: var(--primary); font-size: 1rem; font-weight: 800; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 16px rgba(234,181,0,0.4); }
+.btn-cta-gold:hover { transform: translateY(-2px); }
+
+/* ── FOOTER ── */
+footer { background: #0f3324; color: rgba(255,255,255,0.5); text-align: center; padding: 24px 5%; font-size: 0.8rem; }
+footer a { color: var(--accent3); text-decoration: none; }
+footer a:hover { color: var(--accent2); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .profile-hero-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 28px; }
+  .profile-contacts { align-items: center; }
+  .profile-cta-group { justify-content: center; }
+  .qr-block { align-self: center; }
+  .specialty-layout { grid-template-columns: 1fr; }
+  .breadcrumb { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top">
+  <a href="index_main.html"><img src="logo.jpg" alt="瑞禾不動產經紀股份有限公司" style="height:44px;width:auto;display:block;object-fit:contain;"></a>
+  <a href="index_main.html#team" class="nav-back">← 返回窗口列表</a>
+</nav>
+
+<!-- HERO PROFILE -->
+<section class="profile-hero">
+  <div class="profile-hero-inner">
+
+    <!-- 左：照片 + QR -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+      <!-- 有照片時替換為 <img class="profile-photo" src="images/persons/name.jpg" alt="姓名"> -->
+      <div class="profile-photo-placeholder">👨‍💼</div>
+      <div class="qr-block">
+        <!-- 有 QR 時替換為 <img src="images/qrcodes/qr-name.jpg" alt="LINE QR"> -->
+        <div class="qr-block-placeholder">📱</div>
+        <span>LINE 加好友</span>
+      </div>
+    </div>
+
+    <!-- 右：資訊 -->
+    <div>
+      <div class="breadcrumb">
+        <a href="index_main.html">首頁</a>
+        <span>›</span>
+        <a href="index_main.html#team">負責窗口</a>
+        <span>›</span>
+        <span>【姓名】</span>
+      </div>
+      <span class="profile-title-tag">業務經理・瑞禾不動產</span>
+      <div class="profile-name">【姓名】</div>
+      <div class="profile-role">【職稱，如：工業地產部 業務經理 ／ 工業地產部 業務總監】</div>
+      <div class="profile-contacts">
+        <div class="profile-contact-item">
+          <div class="pci-icon">📱</div>
+          <div class="pci-text"><a href="tel:09XXXXXXXX">09XX-XXXXXX</a></div>
+        </div>
+        <div class="profile-contact-item">
+          <div class="pci-icon">📞</div>
+          <div class="pci-text">公司：<a href="tel:0423803560">04-2380-3560</a></div>
+        </div>
+        <div class="profile-contact-item">
+          <div class="pci-icon">✉️</div>
+          <div class="pci-text">【電子信箱（選填）】</div>
+        </div>
+      </div>
+      <div class="profile-cta-group">
+        <a href="tel:09XXXXXXXX" class="btn-call">📞 立即致電</a>
+        <a href="#" class="btn-line">LINE 加好友</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SPECIALTY & BIO -->
+<section id="specialty">
+  <div class="specialty-layout">
+    <div>
+      <div class="info-card" style="margin-bottom:20px;">
+        <h3><span class="ic">🎯</span>專業服務項目</h3>
+        <div class="specialty-tags">
+          <!-- 依實際專長填入 -->
+          <span class="spec-tag">廠房買賣媒合</span>
+          <span class="spec-tag">廠地租賃仲介</span>
+          <span class="spec-tag-light">設廠選址評估</span>
+          <span class="spec-tag-light">工業用地法規諮詢</span>
+          <span class="spec-tag-light">【其他專長】</span>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3><span class="ic">👤</span>個人簡介</h3>
+        <div class="profile-intro">
+          <p>【第一段：背景介紹，例如從業年資、過往資歷】</p>
+          <p>【第二段：專業特色、服務理念、對客戶的承諾等】</p>
+          <!-- 若無資料可先留空或以通用描述替代 -->
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="info-card">
+        <h3><span class="ic">📋</span>個人資訊</h3>
+        <table style="width:100%;border-collapse:collapse;">
+          <tr style="border-bottom:1px solid #edf3ee;">
+            <td style="padding:10px 4px;font-size:0.88rem;color:#777;font-weight:500;width:90px;">姓名</td>
+            <td style="padding:10px 4px;font-size:0.88rem;color:var(--text-body);font-weight:600;">【姓名】</td>
+          </tr>
+          <tr style="border-bottom:1px solid #edf3ee;">
+            <td style="padding:10px 4px;font-size:0.88rem;color:#777;font-weight:500;">職稱</td>
+            <td style="padding:10px 4px;font-size:0.88rem;color:var(--text-body);font-weight:600;">【職稱】</td>
+          </tr>
+          <tr style="border-bottom:1px solid #edf3ee;">
+            <td style="padding:10px 4px;font-size:0.88rem;color:#777;font-weight:500;">手機</td>
+            <td style="padding:10px 4px;font-size:0.88rem;font-weight:700;"><a href="tel:09XXXXXXXX" style="color:var(--primary);text-decoration:none;">09XX-XXXXXX</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid #edf3ee;">
+            <td style="padding:10px 4px;font-size:0.88rem;color:#777;font-weight:500;">公司電話</td>
+            <td style="padding:10px 4px;font-size:0.88rem;font-weight:600;"><a href="tel:0423803560" style="color:var(--primary);text-decoration:none;">04-2380-3560</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid #edf3ee;">
+            <td style="padding:10px 4px;font-size:0.88rem;color:#777;font-weight:500;">服務縣市</td>
+            <td style="padding:10px 4px;font-size:0.88rem;color:var(--text-body);font-weight:600;">【負責縣市】</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 4px;font-size:0.88rem;color:#777;font-weight:500;">負責園區數</td>
+            <td style="padding:10px 4px;font-size:0.88rem;color:var(--accent2);font-weight:800;">【數量】 個園區</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESPONSIBLE PARKS -->
+<section id="parks">
+  <span class="section-eyebrow">RESPONSIBLE PARKS</span>
+  <h2 class="section-title">負責園區</h2>
+  <div class="divider"></div>
+  <p style="font-size:0.92rem;color:#666;margin-top:12px;">點擊園區名稱即可前往對應子頁面查看物件與詳細資訊</p>
+
+  <div class="parks-grid">
+
+    <!-- 依實際負責園區複製此卡片 -->
+    <a href="park-xxx.html" class="park-link-card">
+      <div class="plc-header">
+        <h3>【園區名稱】</h3>
+        <!-- 依分級: A級 badge-grade-a / B級 badge-grade-b / C級: 移除 badge -->
+        <span class="plc-grade">A 級</span>
+      </div>
+      <div class="plc-body">
+        <div class="plc-meta">
+          <span>【縣市】</span>
+          <span>【面積】公頃</span>
+          <span>【廠商家數】家</span>
+        </div>
+      </div>
+      <span class="plc-btn">▶ 前往園區頁面</span>
+    </a>
+
+    <!-- 依實際數量繼續複製 -->
+
+  </div>
+</section>
+
+<!-- OTHER TEAM -->
+<section id="other-team">
+  <span class="section-eyebrow" style="display:inline-block;background:var(--accent3);color:var(--primary);font-size:0.72rem;font-weight:700;padding:3px 13px;border-radius:20px;margin-bottom:8px;">OTHER TEAM MEMBERS</span>
+  <h2 class="section-title">其他業務窗口</h2>
+  <div class="divider"></div>
+  <div class="team-scroll" style="margin-top:28px;">
+    <!-- 列出其他 5 位，排除自己 -->
+    <a href="person-zeng.html" class="teammate-card">
+      <div class="tm-avatar">👩‍💼</div>
+      <div><div class="tm-name">曾甄茹</div><div class="tm-role">業務經理</div></div>
+    </a>
+    <a href="person-luo.html" class="teammate-card">
+      <div class="tm-avatar">👨‍💼</div>
+      <div><div class="tm-name">羅長庚</div><div class="tm-role">業務經理</div></div>
+    </a>
+    <a href="person-chen.html" class="teammate-card">
+      <div class="tm-avatar">👨‍💼</div>
+      <div><div class="tm-name">陳仁奕</div><div class="tm-role">業務經理</div></div>
+    </a>
+    <a href="person-zhang.html" class="teammate-card">
+      <div class="tm-avatar">👨‍💼</div>
+      <div><div class="tm-name">張現傑</div><div class="tm-role">業務總監</div></div>
+    </a>
+    <a href="person-li.html" class="teammate-card">
+      <div class="tm-avatar">👨‍💼</div>
+      <div><div class="tm-name">李武燦</div><div class="tm-role">業務經理</div></div>
+    </a>
+    <a href="person-liu.html" class="teammate-card">
+      <div class="tm-avatar">👩‍💼</div>
+      <div><div class="tm-name">劉佳穎</div><div class="tm-role">業務經理</div></div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <h2>有廠房廠地需求？<br>直接聯絡【姓名】</h2>
+  <p>無論買賣或租賃，歡迎來電詢問，我們提供專業評估與完整服務</p>
+  <div class="cta-buttons">
+    <a href="tel:09XXXXXXXX" class="btn-cta-gold">📞 立即致電 09XX-XXXXXX</a>
+    <a href="index_main.html" class="btn-cta-white">← 返回首頁</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 瑞禾不動產經紀股份有限公司（RUIHE Real Estate）・中臺灣工業不動產專業服務<br>
+  臺中市南屯區益豐路四段91號 ｜ Tel: 04-2380-3560 ｜ <a href="index_main.html">回到首頁</a></p>
+</footer>
+
+</body>
+</html>

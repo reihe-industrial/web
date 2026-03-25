@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>【園區名稱】｜瑞禾不動產</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;background:#fff;color:#1a2635;line-height:1.75;}
+:root{
+  --primary:#1C5739;
+  --primary-dark:#0e3520;
+  --accent:#EAB500;
+  --accent-dark:#c99a00;
+  --green-mid:#2a7a52;
+  --green-light:#AFC89D;
+  --bg:#f5f8f6;
+  --border:#deeae2;
+  --text:#1a2635;
+  --text-muted:#5a6a6a;
+  --white:#fff;
+  --radius:12px;
+  --shadow:0 2px 12px rgba(28,87,57,0.08);
+  --shadow-hover:0 10px 32px rgba(28,87,57,0.16);
+}
+
+/* ─── NAV ─── */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:var(--primary);
+  height:68px;padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 2px 12px rgba(0,0,0,0.22);
+}
+.nav-logo{height:42px;width:auto;display:block;}
+.nav-menu{display:flex;gap:0;list-style:none;}
+.nav-menu a{
+  display:block;padding:8px 14px;
+  color:rgba(255,255,255,0.82);
+  text-decoration:none;font-size:0.85rem;font-weight:500;
+  border-radius:6px;transition:all 0.18s;
+}
+.nav-menu a:hover{color:#fff;background:rgba(255,255,255,0.12);}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
+.nav-burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;}
+
+/* ─── HERO ─── */
+.hero{
+  background:linear-gradient(140deg,var(--primary-dark) 0%,var(--primary) 50%,var(--green-mid) 100%);
+  color:#fff;padding:72px 5% 64px;
+  position:relative;overflow:hidden;
+}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);}
+.hero-inner{max-width:820px;}
+.breadcrumb{
+  display:flex;align-items:center;gap:8px;
+  font-size:0.75rem;color:rgba(255,255,255,0.55);
+  margin-bottom:18px;
+}
+.breadcrumb a{color:rgba(255,255,255,0.55);text-decoration:none;}
+.breadcrumb a:hover{color:var(--accent);}
+.breadcrumb sep{color:rgba(255,255,255,0.3);}
+.hero-county{
+  display:inline-block;
+  background:rgba(255,255,255,0.14);
+  border:1px solid rgba(255,255,255,0.22);
+  color:#fff;font-size:0.72rem;font-weight:600;
+  padding:4px 14px;border-radius:50px;
+  letter-spacing:0.06em;margin-bottom:14px;
+}
+.hero h1{
+  color:#fff;font-size:clamp(1.8rem,4vw,2.9rem);
+  font-weight:800;line-height:1.25;margin-bottom:14px;
+}
+.hero p{color:rgba(255,255,255,0.75);font-size:0.96rem;max-width:520px;margin-bottom:28px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
+.btn-gold{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:var(--primary);
+  font-size:0.92rem;font-weight:800;
+  padding:12px 26px;border-radius:50px;
+  text-decoration:none;
+  box-shadow:0 4px 16px rgba(234,181,0,0.4);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(234,181,0,0.5);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:#fff;
+  font-size:0.92rem;font-weight:600;
+  padding:11px 22px;border-radius:50px;
+  border:1.5px solid rgba(255,255,255,0.38);
+  text-decoration:none;transition:all 0.2s;
+}
+.btn-ghost:hover{background:rgba(255,255,255,0.1);border-color:#fff;}
+.hero-stats{display:flex;gap:0;flex-wrap:wrap;}
+.hstat{
+  padding:16px 28px 16px 0;
+  margin-right:28px;
+  border-right:1px solid rgba(255,255,255,0.15);
+}
+.hstat:last-child{border-right:none;}
+.hstat .hn{display:block;font-size:1.6rem;font-weight:800;color:var(--accent);line-height:1;}
+.hstat .hl{font-size:0.7rem;color:rgba(255,255,255,0.68);margin-top:5px;}
+
+/* ─── SECTION BASE ─── */
+.section{padding:64px 5%;}
+.section.alt{background:var(--bg);}
+.sec-label{
+  display:inline-block;
+  background:var(--green-light);color:var(--primary);
+  font-size:0.68rem;font-weight:700;
+  padding:3px 13px;border-radius:50px;
+  letter-spacing:0.08em;margin-bottom:9px;
+}
+.sec-title{font-size:clamp(1.25rem,2.6vw,1.75rem);color:var(--primary);font-weight:800;margin-bottom:6px;}
+.divider{width:40px;height:3px;background:var(--accent);border-radius:2px;margin:10px 0 28px;}
+
+/* ─── PARK INFO ─── */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
+.info-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:var(--radius);padding:24px 26px;
+}
+.info-card h3{
+  font-size:0.88rem;font-weight:700;color:var(--primary);
+  margin-bottom:16px;padding-bottom:10px;
+  border-bottom:2px solid var(--accent);
+  display:inline-block;
+}
+.info-table{width:100%;border-collapse:collapse;}
+.info-table tr{border-bottom:1px solid var(--border);}
+.info-table tr:last-child{border-bottom:none;}
+.info-table td{padding:9px 4px;font-size:0.86rem;vertical-align:top;}
+.info-table td:first-child{color:var(--text-muted);font-weight:500;width:88px;white-space:nowrap;}
+.info-table td:last-child{color:var(--text);font-weight:600;}
+.hn{color:var(--accent);font-weight:800;}
+.intro-text p{font-size:0.88rem;line-height:1.85;color:var(--text);margin-bottom:12px;}
+.intro-text p:last-child{margin-bottom:0;}
+
+/* ─── PHOTO GALLERY ─── */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-template-rows:200px 200px;
+  gap:8px;border-radius:var(--radius);overflow:hidden;
+}
+.gallery-item{background:var(--green-light);overflow:hidden;position:relative;}
+.gallery-item:first-child{grid-row:1/3;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s;}
+.gallery-item:hover img{transform:scale(1.04);}
+.gallery-placeholder{
+  width:100%;height:100%;
+  background:linear-gradient(135deg,var(--green-light),#c8dfc0);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;
+}
+.gallery-placeholder .gp-icon{font-size:2rem;opacity:0.5;}
+.gallery-placeholder span{font-size:0.72rem;color:var(--primary);opacity:0.6;font-weight:600;}
+
+/* ─── MAP ─── */
+.map-wrap{
+  border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+.map-wrap iframe{display:block;width:100%;height:400px;border:none;}
+.map-note{
+  font-size:0.78rem;color:var(--text-muted);
+  margin-top:10px;
+  display:flex;align-items:center;gap:6px;
+}
+.map-note::before{
+  content:'';display:block;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);flex-shrink:0;
+}
+
+/* ─── CAROUSEL ─── */
+.carousel-wrap{position:relative;}
+.carousel-outer{overflow:hidden;border-radius:var(--radius);}
+.carousel-track{
+  display:flex;gap:18px;
+  transition:transform 0.42s cubic-bezier(0.4,0,0.2,1);
+  will-change:transform;
+}
+.c-card{
+  flex:0 0 calc(33.333% - 12px);
+  background:#fff;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--border);box-shadow:var(--shadow);
+  transition:box-shadow 0.22s;
+}
+.c-card:hover{box-shadow:var(--shadow-hover);}
+.c-img{
+  height:180px;background:var(--green-light);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.c-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.c-img .c-fallback{font-size:2.5rem;opacity:0.5;}
+.c-status{
+  position:absolute;top:12px;left:12px;
+  font-size:0.68rem;font-weight:800;
+  padding:3px 11px;border-radius:20px;
+}
+.s-sell{background:var(--accent);color:var(--primary);}
+.s-rent{background:#22c55e;color:#fff;}
+.s-done{background:#94a3b8;color:#fff;}
+.c-body{padding:16px 18px 18px;}
+.c-body h3{font-size:0.93rem;font-weight:700;color:var(--primary);margin-bottom:5px;}
+.c-loc{font-size:0.76rem;color:var(--green-mid);font-weight:600;margin-bottom:11px;}
+.c-specs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px;}
+.cs{background:var(--bg);border-radius:7px;padding:6px 9px;}
+.cs .csl{font-size:0.62rem;color:#888;display:block;}
+.cs .csv{font-size:0.82rem;font-weight:700;color:var(--primary);}
+.c-price{font-size:1.15rem;font-weight:800;color:var(--accent);margin-bottom:13px;}
+.c-price small{font-size:0.7rem;color:#999;font-weight:500;margin-left:3px;}
+.c-btn{
+  display:block;text-align:center;
+  background:var(--accent);color:var(--primary);
+  font-weight:800;font-size:0.82rem;
+  padding:9px;border-radius:8px;
+  text-decoration:none;transition:background 0.18s;
+}
+.c-btn:hover{background:var(--accent-dark);}
+.c-placeholder{
+  flex:0 0 calc(33.333% - 12px);
+  background:#fff;border:1.5px dashed var(--green-light);
+  border-radius:var(--radius);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:40px 20px;text-align:center;min-height:340px;
+}
+.c-placeholder p{font-size:0.82rem;color:#9ab09a;line-height:1.7;}
+.carousel-ctrl{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:20px;
+}
+.c-dots{display:flex;gap:7px;}
+.dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--green-light);cursor:pointer;
+  border:none;transition:all 0.2s;
+}
+.dot.on{background:var(--primary);width:22px;border-radius:4px;}
+.c-arrows{display:flex;gap:8px;}
+.arw{
+  width:38px;height:38px;border-radius:50%;
+  border:1.5px solid var(--border);background:#fff;
+  color:var(--primary);font-size:1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.18s;font-weight:700;
+}
+.arw:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+/* ─── CONTACTS ─── */
+.contacts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;}
+.contact-card{
+  background:#fff;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--border);box-shadow:var(--shadow);
+  text-align:center;
+  transition:transform 0.22s,box-shadow 0.22s;
+  text-decoration:none;color:inherit;display:block;
+}
+.contact-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);}
+.cp-wrap{
+  width:100%;aspect-ratio:3/4;
+  background:linear-gradient(160deg,var(--green-light),#c8dfc0);
+  display:flex;align-items:center;justify-content:center;
+  font-size:3rem;color:var(--primary);
+}
+.cp-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+.cb{padding:14px 12px 16px;}
+.cb-name{font-size:0.98rem;font-weight:700;color:var(--primary);margin-bottom:4px;}
+.cb-role{
+  font-size:0.7rem;color:var(--primary);font-weight:600;
+  background:#e8f2ec;display:inline-block;
+  padding:2px 10px;border-radius:20px;margin-bottom:8px;
+}
+.cb-phone{font-size:0.84rem;font-weight:600;color:var(--text);}
+.cb-phone a{color:var(--primary);text-decoration:none;}
+.cb-qr{
+  display:flex;flex-direction:column;align-items:center;
+  gap:4px;margin-top:10px;padding-top:10px;
+  border-top:1px solid var(--border);
+}
+.cb-qr img{width:76px;height:76px;border-radius:6px;background:#eee;}
+.cb-qr-ph{
+  width:76px;height:76px;border-radius:6px;
+  background:var(--bg);display:flex;align-items:center;
+  justify-content:center;font-size:1.4rem;color:var(--text-muted);
+}
+.cb-qr span{font-size:0.62rem;color:#06C755;font-weight:700;letter-spacing:0.04em;}
+
+/* ─── OTHER PARKS ─── */
+.other-grid{display:flex;gap:10px;flex-wrap:wrap;}
+.park-jump{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:8px;padding:10px 14px;
+  text-decoration:none;color:inherit;
+  transition:all 0.18s;
+  display:flex;flex-direction:column;
+  min-width:130px;
+}
+.park-jump:hover{background:var(--primary);border-color:var(--primary);}
+.park-jump:hover .pj-name{color:#fff;}
+.park-jump:hover .pj-county{color:var(--accent);}
+.pj-name{font-size:0.84rem;font-weight:700;color:var(--primary);line-height:1.35;}
+.pj-county{font-size:0.66rem;color:var(--text-muted);margin-top:3px;}
+.back-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--primary);color:#fff;
+  font-weight:700;font-size:0.9rem;
+  padding:11px 26px;border-radius:8px;
+  text-decoration:none;margin-top:24px;
+  transition:background 0.18s;
+}
+.back-btn:hover{background:var(--green-mid);}
+
+/* ─── FOOTER ─── */
+footer{
+  background:#0a2516;color:rgba(255,255,255,0.45);
+  text-align:center;padding:22px 5%;font-size:0.78rem;line-height:1.8;
+}
+footer a{color:var(--green-light);text-decoration:none;}
+footer a:hover{color:var(--accent);}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .info-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px;}
+  .gallery-item:first-child{grid-row:auto;}
+  .c-card,.c-placeholder{flex:0 0 calc(50% - 9px);}
+}
+@media(max-width:640px){
+  .nav-burger{display:flex;}
+  .nav-menu{
+    display:none;position:absolute;top:68px;left:0;right:0;
+    background:var(--primary);flex-direction:column;
+    padding:14px 5%;gap:4px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.22);
+  }
+  .nav-menu.open{display:flex;}
+  nav{position:relative;}
+  .hero-stats{flex-direction:row;flex-wrap:wrap;gap:0;}
+  .hstat{padding:12px 16px 12px 0;margin-right:16px;}
+  .c-card,.c-placeholder{flex:0 0 100%;}
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:200px 160px 160px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top">
+  <a href="index_main.html"><img src="logo.png" alt="瑞禾不動產經紀股份有限公司" class="nav-logo"></a>
+  <button class="nav-burger" id="burger" aria-label="選單"><span></span><span></span><span></span></button>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="#park-info">園區資訊</a></li>
+    <li><a href="#park-map">園區位置</a></li>
+    <li><a href="#carousel">物件展示</a></li>
+    <li><a href="#contacts">負責窗口</a></li>
+    <li><a href="#other-parks">其他園區</a></li>
+    <li><a href="index_main.html">← 返回首頁</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index_main.html">首頁</a>
+      <sep>›</sep>
+      <span>【縣市名稱】</span>
+      <sep>›</sep>
+      <span>【園區名稱】</span>
+    </div>
+    <div class="hero-county">【縣市名稱】</div>
+    <h1>【園區名稱】<br>廠房・廠地 買賣租賃</h1>
+    <p>【園區一句話描述，例如：位於彰化縣跨鹿港、線西、伸港三鄉鎮，產業聚落完整，廠商超過 587 家】</p>
+    <div class="hero-btns">
+      <a href="#carousel" class="btn-gold">查看可用物件</a>
+      <a href="#contacts" class="btn-ghost">聯絡負責窗口</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hn">【面積】</span><span class="hl">公頃・開發面積</span></div>
+      <div class="hstat"><span class="hn">【廠商數】</span><span class="hl">家・廠商進駐</span></div>
+      <div class="hstat"><span class="hn">【縣市】</span><span class="hl">所在縣市</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ① 園區基本資訊 -->
+<section class="section" id="park-info">
+  <span class="sec-label">PARK INFORMATION</span>
+  <h2 class="sec-title">園區基本資訊</h2>
+  <div class="divider"></div>
+
+  <!-- 園區照片 -->
+  <div class="gallery-grid" style="margin-bottom:36px;">
+    <div class="gallery-item">
+      <!-- <img src="images/park/main.jpg" alt="園區主圖"> -->
+      <div class="gallery-placeholder">
+        <div class="gp-icon">▣</div>
+        <span>園區主圖</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gp-icon">▣</div>
+        <span>廠房外觀</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gp-icon">▣</div>
+        <span>園區道路</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gp-icon">▣</div>
+        <span>鳥瞰圖</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="gp-icon">▣</div>
+        <span>周邊環境</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>基本資料</h3>
+      <table class="info-table">
+        <tr><td>全名</td><td>【園區全名】</td></tr>
+        <tr><td>位置</td><td>【縣市、鄉鎮區域描述】</td></tr>
+        <tr><td>總面積</td><td><span class="hn">【面積】 公頃</span></td></tr>
+        <tr><td>廠商家數</td><td><span class="hn">約 【數量】 家</span></td></tr>
+        <tr><td>開發起始</td><td>【民國年份】（【西元年份】）</td></tr>
+        <tr><td>土地分區</td><td>【例：工業區—丁種建築用地】</td></tr>
+        <tr><td>管理單位</td><td>【管理單位名稱】</td></tr>
+      </table>
+    </div>
+    <div>
+      <div class="info-card" style="margin-bottom:20px;">
+        <h3>交通區位</h3>
+        <div class="intro-text">
+          <p>【交通說明，包含鄰近道路、高速公路、交流道距離等，說明物流便利性與對外交通優勢。】</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3>主要產業類型</h3>
+        <ul style="font-size:0.86rem;color:var(--text);padding-left:16px;line-height:2.1;">
+          <li>【產業類型 1】</li>
+          <li>【產業類型 2】</li>
+          <li>【產業類型 3】</li>
+          <li>【產業類型 4】</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ② 園區位置（Google 地圖） -->
+<section class="section alt" id="park-map">
+  <span class="sec-label">LOCATION</span>
+  <h2 class="sec-title">園區位置</h2>
+  <div class="divider"></div>
+  <div class="map-wrap">
+    <!--
+      使用方式：
+      1. 前往 Google Maps 搜尋園區名稱
+      2. 點選「分享」→「嵌入地圖」
+      3. 複製 iframe src 網址，貼入下方 src=""
+    -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d120.5!3d24.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z【替換：Google Maps 嵌入網址】!5e0!3m2!1szh-TW!2stw!4v0"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="【園區名稱】位置地圖">
+    </iframe>
+  </div>
+  <p class="map-note">地圖顯示【園區名稱】大致位置，實際範圍請參考官方資料</p>
+</section>
+
+<!-- ③ 物件輪播展示（園區及周邊物件） -->
+<section class="section" id="carousel">
+  <span class="sec-label">LISTINGS</span>
+  <h2 class="sec-title">園區及周邊物件</h2>
+  <div class="divider"></div>
+
+  <div class="carousel-wrap">
+    <div class="carousel-outer">
+      <div class="carousel-track" id="cTrack">
+
+        <!-- 物件卡片 1（出售範例） -->
+        <div class="c-card">
+          <div class="c-img">
+            <!-- <img src="images/objects/obj-001.jpg" alt="物件名稱"> -->
+            <span class="c-fallback">▣</span>
+            <span class="c-status s-sell">出售中</span>
+          </div>
+          <div class="c-body">
+            <h3>【物件名稱／標題】</h3>
+            <div class="c-loc">【大致位置：僅縣市或園區名，不含詳細地址】</div>
+            <div class="c-specs">
+              <div class="cs"><span class="csl">土地面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs"><span class="csl">建物面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs"><span class="csl">物件類型</span><span class="csv">【廠房/土地/倉儲】</span></div>
+              <div class="cs"><span class="csl">樓層</span><span class="csv">【樓層數】</span></div>
+            </div>
+            <div class="c-price">NT$ 【金額】<small>元（整棟出售）</small></div>
+            <a href="#contacts" class="c-btn">詢問此物件</a>
+          </div>
+        </div>
+
+        <!-- 物件卡片 2（招租範例） -->
+        <div class="c-card">
+          <div class="c-img">
+            <span class="c-fallback">▣</span>
+            <span class="c-status s-rent">招租中</span>
+          </div>
+          <div class="c-body">
+            <h3>【物件名稱／標題】</h3>
+            <div class="c-loc">【大致位置】</div>
+            <div class="c-specs">
+              <div class="cs"><span class="csl">土地面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs"><span class="csl">建物面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs"><span class="csl">物件類型</span><span class="csv">【類型】</span></div>
+              <div class="cs"><span class="csl">月租金</span><span class="csv">面議</span></div>
+            </div>
+            <div class="c-price">月租 NT$ 【金額】<small>/月</small></div>
+            <a href="#contacts" class="c-btn">詢問此物件</a>
+          </div>
+        </div>
+
+        <!-- 物件卡片 3 -->
+        <div class="c-card">
+          <div class="c-img">
+            <span class="c-fallback">▣</span>
+            <span class="c-status s-sell">出售中</span>
+          </div>
+          <div class="c-body">
+            <h3>【物件名稱／標題】</h3>
+            <div class="c-loc">【大致位置】</div>
+            <div class="c-specs">
+              <div class="cs"><span class="csl">土地面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs"><span class="csl">建物面積</span><span class="csv">【坪數】坪</span></div>
+              <div class="cs"><span class="csl">物件類型</span><span class="csv">【類型】</span></div>
+              <div class="cs"><span class="csl">售價</span><span class="csv">面議</span></div>
+            </div>
+            <div class="c-price">NT$ 【金額】<small>元</small></div>
+            <a href="#contacts" class="c-btn">詢問此物件</a>
+          </div>
+        </div>
+
+        <!-- 佔位（物件不足時顯示） -->
+        <div class="c-placeholder">
+          <p>更多物件即將上架<br>歡迎致電詢問未公開物件</p>
+        </div>
+        <div class="c-placeholder">
+          <p>客製需求歡迎告知<br>我們協助尋找<br>適合廠房廠地</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="carousel-ctrl">
+      <div class="c-dots" id="cDots"></div>
+      <div class="c-arrows">
+        <button class="arw" id="cPrev">‹</button>
+        <button class="arw" id="cNext">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 負責窗口 -->
+<section class="section alt" id="contacts">
+  <span class="sec-label">CONTACT WINDOW</span>
+  <h2 class="sec-title">負責窗口</h2>
+  <div class="divider"></div>
+  <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:28px;">本園區專屬業務窗口，直接聯絡最快速</p>
+  <div class="contacts-grid">
+
+    <!-- 依實際窗口數複製此卡片，最多 3 位 -->
+    <a href="person-xxx.html" class="contact-card">
+      <div class="cp-wrap">
+        <!-- 有照片時替換：<img src="images/persons/name.jpg" alt="姓名"> -->
+        ▣
+      </div>
+      <div class="cb">
+        <div class="cb-name">【姓名】</div>
+        <div class="cb-role">業務經理</div>
+        <div class="cb-phone"><a href="tel:09XXXXXXXX">09XX-XXXXXX</a></div>
+        <div class="cb-qr">
+          <!-- 有 QR 時替換：<img src="images/qrcodes/qr-name.jpg" alt="LINE QR"> -->
+          <div class="cb-qr-ph">LINE</div>
+          <span>LINE 加好友</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ⑤ 其他產業園區 -->
+<section class="section" id="other-parks">
+  <span class="sec-label">OTHER PARKS</span>
+  <h2 class="sec-title">其他產業園區</h2>
+  <div class="divider"></div>
+  <div class="other-grid">
+    <a href="park-toufen.html" class="park-jump"><span class="pj-name">頭份產業園區</span><span class="pj-county">苗栗縣</span></a>
+    <a href="park-zhunan.html" class="park-jump"><span class="pj-name">竹南產業園區</span><span class="pj-county">苗栗縣</span></a>
+    <a href="park-tongluo.html" class="park-jump"><span class="pj-name">銅鑼產業園區</span><span class="pj-county">苗栗縣</span></a>
+    <a href="park-taichung.html" class="park-jump"><span class="pj-name">台中產業園區</span><span class="pj-county">台中市</span></a>
+    <a href="park-dajia.html" class="park-jump"><span class="pj-name">大甲幼獅產業園區</span><span class="pj-county">台中市</span></a>
+    <a href="park-taichungport-tech.html" class="park-jump"><span class="pj-name">台中港科技產業園區</span><span class="pj-county">台中市</span></a>
+    <a href="park-taichungport-rel.html" class="park-jump"><span class="pj-name">台中港關連產業園區</span><span class="pj-county">台中市</span></a>
+    <a href="park-dali.html" class="park-jump"><span class="pj-name">大里產業園區</span><span class="pj-county">台中市</span></a>
+    <a href="park-tanzi.html" class="park-jump"><span class="pj-name">潭子科技產業園區</span><span class="pj-county">台中市</span></a>
+    <a href="park-software.html" class="park-jump"><span class="pj-name">臺中軟體園區</span><span class="pj-county">台中市</span></a>
+    <a href="park-zhangbin.html" class="park-jump"><span class="pj-name">彰濱產業園區</span><span class="pj-county">彰化縣</span></a>
+    <a href="park-quanxing.html" class="park-jump"><span class="pj-name">全興產業園區</span><span class="pj-county">彰化縣</span></a>
+    <a href="park-fangyuan.html" class="park-jump"><span class="pj-name">芳苑產業園區</span><span class="pj-county">彰化縣</span></a>
+    <a href="park-fuxing.html" class="park-jump"><span class="pj-name">福興產業園區</span><span class="pj-county">彰化縣</span></a>
+    <a href="park-tianzhong.html" class="park-jump"><span class="pj-name">田中產業園區</span><span class="pj-county">彰化縣</span></a>
+    <a href="park-pitou.html" class="park-jump"><span class="pj-name">埤頭產業園區</span><span class="pj-county">彰化縣</span></a>
+    <a href="park-shetou.html" class="park-jump"><span class="pj-name">社頭織襪產業園區</span><span class="pj-county">彰化縣</span></a>
+    <a href="park-nangang.html" class="park-jump"><span class="pj-name">南崗產業園區</span><span class="pj-county">南投縣</span></a>
+    <a href="park-zhushan.html" class="park-jump"><span class="pj-name">竹山產業園區</span><span class="pj-county">南投縣</span></a>
+  </div>
+  <a href="index_main.html" class="back-btn">← 返回主網頁</a>
+</section>
+
+<footer>
+  <p>© 2025 瑞禾不動產經紀股份有限公司（RUIHE Real Estate）・中臺灣工業不動產專業服務</p>
+  <p>臺中市南屯區益豐路四段91號 ｜ Tel: 04-2380-3560 ｜ <a href="index_main.html">回到首頁</a></p>
+</footer>
+
+<script>
+// NAV
+document.getElementById('burger').addEventListener('click',()=>{
+  document.getElementById('navMenu').classList.toggle('open');
+});
+
+// CAROUSEL
+(function(){
+  const track=document.getElementById('cTrack');
+  const dots=document.getElementById('cDots');
+  if(!track)return;
+  let cur=0,timer;
+
+  function visCount(){
+    return window.innerWidth>=900?3:window.innerWidth>=640?2:1;
+  }
+  function totalSlides(){
+    return Math.max(1,track.children.length-visCount()+1);
+  }
+  function buildDots(){
+    dots.innerHTML='';
+    for(let i=0;i<totalSlides();i++){
+      const d=document.createElement('button');
+      d.className='dot'+(i===cur?' on':'');
+      d.addEventListener('click',()=>go(i));
+      dots.appendChild(d);
+    }
+  }
+  function go(idx){
+    const total=totalSlides();
+    cur=Math.max(0,Math.min(idx,total-1));
+    const w=track.children[0].offsetWidth+18;
+    track.style.transform=`translateX(-${cur*w}px)`;
+    dots.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===cur));
+  }
+  function next(){go(cur+1>=totalSlides()?0:cur+1);}
+  function prev(){go(cur-1<0?totalSlides()-1:cur-1);}
+  function startAuto(){clearInterval(timer);timer=setInterval(next,4000);}
+
+  document.getElementById('cNext').addEventListener('click',()=>{next();startAuto();});
+  document.getElementById('cPrev').addEventListener('click',()=>{prev();startAuto();});
+  track.addEventListener('mouseenter',()=>clearInterval(timer));
+  track.addEventListener('mouseleave',startAuto);
+
+  let tx=0;
+  track.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',e=>{
+    const d=tx-e.changedTouches[0].clientX;
+    if(Math.abs(d)>50){d>0?next():prev();startAuto();}
+  });
+
+  window.addEventListener('resize',()=>{buildDots();go(Math.min(cur,totalSlides()-1));});
+  buildDots();
+  startAuto();
+})();
+</script>
+</body>
+</html>
