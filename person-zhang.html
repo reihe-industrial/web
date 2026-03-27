@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>張現傑 業務總監｜瑞禾不動產經紀股份有限公司</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; background: #fff; color: #1a2635; line-height: 1.75; }
+:root {
+  --p: #1C5739; --pd: #0e3520; --a: #EAB500; --ad: #c99a00;
+  --gm: #2a7a52; --gl: #AFC89D; --bg: #f5f8f6; --bd: #deeae2;
+  --tx: #1a2635; --muted: #5a6a6a; --r: 12px;
+  --sh: 0 2px 12px rgba(28,87,57,0.08); --shh: 0 10px 32px rgba(28,87,57,0.16);
+}
+
+/* ── NAV ── */
+nav { position: sticky; top: 0; z-index: 200; background: #fff; height: 64px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 1px 0 var(--bd), 0 2px 12px rgba(0,0,0,0.06); }
+.nav-back { color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; padding: 7px 14px; border-radius: 8px; border: 1px solid var(--bd); transition: all .18s; }
+.nav-back:hover { color: var(--p); background: var(--bg); }
+
+/* ── HERO ── */
+.hero { background: linear-gradient(135deg, var(--pd) 0%, var(--p) 40%, #1e6b45 70%, #2a7a52 100%); padding: 0; position: relative; overflow: hidden; min-height: 360px; display: flex; align-items: stretch; justify-content: flex-start; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--a); z-index: 2; }
+.hero::before { content: ''; position: absolute; top: -80px; right: -80px; width: 420px; height: 420px; border-radius: 50%; background: rgba(255,255,255,0.025); pointer-events: none; }
+.hero-deco { position: absolute; bottom: -80px; right: 5%; width: 280px; height: 280px; border-radius: 50%; border: 50px solid rgba(255,255,255,0.035); pointer-events: none; }
+.hero-inner { display: grid; grid-template-columns: 380px 1fr; gap: 0; width: 100%; align-items: stretch; position: relative; }
+.hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 5px 12px; font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-top: 16px; width: fit-content; }
+.hero-tag span { color: var(--a); font-weight: 700; font-size: 0.78rem; }
+
+/* 左欄：照片滿版＋右側霧化 */
+.photo-col { display: flex; flex-direction: column; align-items: stretch; height: 100%; position: relative; }
+.profile-photo { width: 100%; height: 100%; min-height: 340px; object-fit: cover; object-position: top center; display: block; }
+.photo-col::after { content: ''; position: absolute; top: 0; right: -1px; width: 100px; height: 100%; background: linear-gradient(to right, transparent 0%, rgba(28,87,57,0.5) 50%, rgba(28,87,57,0.92) 80%, #1C5739 100%); pointer-events: none; z-index: 1; }
+.photo-placeholder {
+  width: 200px; height: 260px;
+  background: rgba(255,255,255,0.06);
+  border: 2px dashed rgba(255,255,255,0.25);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; color: rgba(255,255,255,0.35); font-size: 0.72rem; text-align: center;
+}
+.photo-placeholder span { font-size: 2rem; }
+.qr-placeholder {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px; padding: 10px 14px 12px;
+  display: inline-flex; flex-direction: row; align-items: center;
+  gap: 12px; margin-top: 20px; width: fit-content;
+}
+.qr-placeholder img { width: 80px; height: 80px; border-radius: 6px; display: block; background: #fff; }
+.qr-placeholder .qr-box {
+  width: 80px; height: 80px; border: 2px dashed rgba(255,255,255,0.3); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; color: rgba(255,255,255,0.5); text-align: center; line-height: 1.5;
+}
+.qr-placeholder .qr-label { font-size: 0.7rem; color: #06C755; font-weight: 700; }
+
+/* 右欄：資訊 */
+.info-col { padding: 40px 8% 40px 52px; display: flex; flex-direction: column; justify-content: center; position: relative; max-width: 660px; }
+.breadcrumb { display: flex; align-items: center; gap: 7px; font-size: 0.72rem; color: rgba(255,255,255,0.45); margin-bottom: 14px; flex-wrap: wrap; }
+.breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
+.breadcrumb a:hover { color: var(--a); }
+.breadcrumb .sep { color: rgba(255,255,255,0.25); }
+.title-tag { display: inline-block; background: var(--a); color: var(--p); font-size: 0.7rem; font-weight: 800; padding: 3px 12px; border-radius: 20px; letter-spacing: .05em; margin-bottom: 10px; }
+.pname { color: #fff; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; line-height: 1.1; margin-bottom: 5px; letter-spacing: .03em; }
+.prole { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 22px; }
+.contacts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.ci { display: flex; align-items: center; gap: 10px; }
+.ci-icon { width: 30px; height: 30px; background: rgba(255,255,255,0.1); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--a); }
+.ci-text { font-size: 0.87rem; color: rgba(255,255,255,0.82); }
+.ci-text a { color: var(--a); text-decoration: none; font-weight: 700; }
+.ci-text a:hover { text-decoration: underline; }
+.cta-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-call { display: inline-flex; align-items: center; gap: 7px; background: var(--a); color: var(--p); font-size: 0.88rem; font-weight: 800; padding: 10px 22px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 14px rgba(234,181,0,0.38); transition: transform .2s; }
+.btn-call:hover { transform: translateY(-2px); }
+.btn-line { display: inline-flex; align-items: center; gap: 7px; background: #06C755; color: #fff; font-size: 0.88rem; font-weight: 700; padding: 10px 20px; border-radius: 50px; text-decoration: none; transition: transform .2s; }
+.btn-line:hover { transform: translateY(-2px); }
+
+/* ── CONTENT ── */
+.sec { padding: 36px 5%; }
+.sec-alt { background: var(--bg); padding: 36px 5%; }
+.sec-label { display: inline-block; background: var(--gl); color: var(--p); font-size: 0.68rem; font-weight: 700; padding: 3px 12px; border-radius: 20px; letter-spacing: .06em; margin-bottom: 8px; }
+.sec-title { font-size: clamp(1.2rem, 2.5vw, 1.6rem); color: var(--p); font-weight: 800; margin-bottom: 5px; }
+.sec-div { width: 36px; height: 3px; background: var(--a); border-radius: 2px; margin: 8px 0 24px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.card { background: #fff; border: 1px solid var(--bd); border-radius: var(--r); padding: 20px; }
+.sec-alt .card { background: #fff; }
+.card + .card { margin-top: 16px; }
+.card h4 { font-size: 0.88rem; font-weight: 700; color: var(--p); margin-bottom: 13px; display: flex; align-items: center; gap: 7px; }
+.card h4 .ic { width: 24px; height: 24px; background: var(--gl); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; flex-shrink: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag { background: var(--p); color: #fff; font-size: 0.76rem; font-weight: 600; padding: 5px 12px; border-radius: 6px; }
+.tag-light { background: #edf5f0; color: var(--p); font-size: 0.76rem; font-weight: 600; padding: 5px 12px; border-radius: 6px; border: 1px solid var(--bd); }
+.intro { font-size: 0.87rem; line-height: 1.9; color: var(--tx); }
+.intro p { margin-bottom: 11px; }
+.intro p:last-child { margin-bottom: 0; }
+.info-table { width: 100%; border-collapse: collapse; }
+.info-table tr { border-bottom: 1px solid #edf3ee; }
+.info-table tr:last-child { border-bottom: none; }
+.info-table td { padding: 9px 6px; font-size: 0.84rem; vertical-align: top; }
+.info-table td:first-child { color: var(--muted); font-weight: 500; width: 80px; white-space: nowrap; }
+.info-table td:last-child { color: var(--tx); font-weight: 600; }
+.ach-list { list-style: none; padding: 0; margin: 0; }
+.ach-list li { display: flex; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--bd); font-size: 0.83rem; color: var(--tx); line-height: 1.65; }
+.ach-list li:last-child { border-bottom: none; }
+.ach-list li::before { content: '▸'; color: var(--a); font-size: 0.68rem; margin-top: 4px; flex-shrink: 0; }
+
+/* ── PARKS ── */
+.parks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 0; }
+.park-card { background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid var(--bd); text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+.park-card:hover { transform: translateY(-2px); box-shadow: var(--shh); }
+.park-card-hd { background: linear-gradient(135deg, var(--p), var(--gm)); padding: 12px 14px; }
+.park-card-hd h3 { color: #fff; font-size: 0.86rem; font-weight: 700; }
+.park-card-bd { padding: 10px 14px; }
+.park-card-bd span { font-size: 0.72rem; color: #777; background: var(--bg); padding: 2px 8px; border-radius: 5px; }
+.park-card-ft { display: block; text-align: center; background: var(--a); color: var(--p); font-weight: 800; font-size: 0.76rem; padding: 7px; border-radius: 0 0 10px 10px; text-decoration: none; }
+.park-card-ft:hover { background: var(--ad); }
+
+/* ── OTHER TEAM ── */
+.team-cards { display: flex; flex-wrap: wrap; gap: 10px; }
+.tm-card { background: var(--bg); border: 1px solid var(--bd); border-radius: 10px; padding: 10px 14px; text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px; transition: all .2s; }
+.tm-card:hover { background: var(--p); border-color: var(--p); transform: translateY(-2px); }
+.tm-card:hover .tm-n { color: #fff; }
+.tm-card:hover .tm-r { color: var(--a); background: rgba(255,255,255,0.12); }
+.tm-av { width: 38px; height: 38px; border-radius: 50%; overflow: hidden; background: var(--gl); flex-shrink: 0; }
+.tm-av img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.tm-n { font-size: 0.88rem; font-weight: 700; color: var(--p); }
+.tm-r { font-size: 0.64rem; color: var(--gm); background: #edf5f0; display: inline-block; padding: 1px 7px; border-radius: 20px; margin-top: 2px; }
+
+/* ── CTA ── */
+.cta-sec { background: var(--p); padding: 36px 5%; text-align: center; }
+.cta-sec h2 { color: #fff; font-size: clamp(1.2rem, 2.5vw, 1.7rem); margin-bottom: 10px; }
+.cta-sec p { color: rgba(255,255,255,0.65); font-size: 0.87rem; max-width: 440px; margin: 0 auto 24px; }
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-gold { display: inline-flex; align-items: center; gap: 7px; background: var(--a); color: var(--p); font-size: 0.92rem; font-weight: 800; padding: 11px 28px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 14px rgba(234,181,0,0.38); transition: transform .2s; }
+.btn-gold:hover { transform: translateY(-2px); }
+.btn-white { display: inline-flex; align-items: center; gap: 7px; background: #fff; color: var(--p); font-size: 0.92rem; font-weight: 800; padding: 11px 28px; border-radius: 50px; text-decoration: none; transition: transform .2s; }
+.btn-white:hover { transform: translateY(-2px); }
+
+/* ── FOOTER ── */
+footer { background: #0a2516; color: rgba(255,255,255,0.4); text-align: center; padding: 18px 5%; font-size: 0.76rem; line-height: 1.8; }
+footer a { color: var(--gl); text-decoration: none; }
+footer a:hover { color: var(--a); }
+
+/* ── RWD ── */
+@media (max-width: 700px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .profile-photo { min-height: 280px; }
+  .info-col { padding: 24px 5%; text-align: center; }
+  .qr-placeholder { margin: 16px auto 0; }
+  .info-col { padding-bottom: 28px; }
+  .breadcrumb { justify-content: center; }
+  .contacts { align-items: center; }
+  .cta-row { justify-content: center; }
+  .two-col { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html"><img src="logo.png" alt="瑞禾不動產" style="height:38px;width:auto;display:block;"></a>
+  <a href="index.html#team" class="nav-back">← 返回團隊列表</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-deco"></div>
+  <div class="hero-inner">
+
+    <!-- 左欄：照片＋QR（待補） -->
+    <div class="photo-col">
+            <img class="profile-photo" src="photo-zhang.jpg" alt="">
+    </div>
+
+    <!-- 右欄：資訊 -->
+    <div class="info-col">
+      <div class="breadcrumb">
+        <a href="index.html">首頁</a>
+        <span class="sep">›</span>
+        <a href="index.html#team">團隊成員</a>
+        <span class="sep">›</span>
+        <span>張現傑</span>
+      </div>
+      <span class="title-tag">業務總監・瑞禾不動產</span>
+      <div class="pname">張現傑</div>
+      <div class="prole">瑞禾不動產 業務總監</div>
+      <div class="contacts">
+        <div class="ci">
+          <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <div class="ci-text"><a href="tel:0953909777">0953-909-777</a></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="ci-text">公司：<a href="tel:0423803560">04-2380-3560</a></div>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="tel:0953909777" class="btn-call">立即致電</a>
+        <a href="#" class="btn-line">LINE 加好友</a>
+      </div>
+      <div class="qr-placeholder">
+        <img src="qr-zhang.jpg" alt="LINE QR">
+        <span class="qr-label">LINE 加好友</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="sec">
+  <div class="two-col">
+    <!-- 左：專長＋簡介 -->
+    <div>
+      <div class="card">
+        <h4><span class="ic">🎯</span>專業服務項目</h4>
+        <div class="tags"><span class="tag">廠房買賣媒合</span><span class="tag">廠地租賃仲介</span><span class="tag-light">市場分析</span><span class="tag-light">專案整合</span><span class="tag-light">風險評估</span><span class="tag-light">交易流程規劃</span></div>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h4><span class="ic">👤</span>個人簡介</h4>
+        <div class="intro"><p>張現傑業務總監畢業於長庚大學資訊管理研究所，擁有不動產經紀人證照（(108)中市經紀字第01847號），具備深厚的商用不動產業務執行與市場分析能力。</p><p>曾任職信義全球資產中區商仲部業務總監、磐石地產業務總監、睦聚地產開發業務總監，主導成立信義全球資產中區商仲部，奠定中部商用不動產專業服務基礎。</p></div>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h4><span class="ic">🏆</span>核心代表實績</h4>
+        <ul class="ach-list"><li>主導成立信義全球資產中區商仲部，奠定中部商用不動產專業服務基礎</li><li>整合多筆指標性建地，為惠宇、德鑫等知名建設公司合作夥伴</li><li>協助日商優乃克、聯強國際、歐客佬國際、仟泰化工、捷雅工程等指標企業完成廠房選址與資產活化</li></ul>
+      </div>
+    </div>
+    <!-- 右：個人資訊 -->
+    <div>
+      <div class="card">
+        <h4><span class="ic">📋</span>個人資訊</h4>
+        <table class="info-table"><tr><td>姓名</td><td>張現傑</td></tr><tr><td>職稱</td><td>業務總監</td></tr><tr><td>手機</td><td><a href="tel:0953909777" style="color:var(--p);font-weight:700;">09XX-XXXXXX</a></td></tr><tr><td>公司電話</td><td><a href="tel:0423803560" style="color:var(--p);">04-2380-3560</a></td></tr><tr><td>學歷</td><td>長庚大學 資訊管理研究所（畢）</td></tr><tr><td>證照</td><td>不動產經紀人 (108)中市經紀字第01847號</td></tr></table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-alt">
+  <span class="sec-label">RESPONSIBLE PARKS</span>
+  <h2 class="sec-title">負責園區</h2>
+  <div class="sec-div"></div>
+  <div class="parks-grid"><a href="park-taichung.html" class="park-card">
+          <div class="park-card-hd"><h3>台中產業園區</h3></div>
+          <div class="park-card-bd"><span>台中市</span></div>
+          <span class="park-card-ft">▶ 前往園區頁面</span>
+        </a><a href="park-taichungport-tech.html" class="park-card">
+          <div class="park-card-hd"><h3>台中港科技產業園區</h3></div>
+          <div class="park-card-bd"><span>台中市</span></div>
+          <span class="park-card-ft">▶ 前往園區頁面</span>
+        </a><a href="park-zhunan.html" class="park-card">
+          <div class="park-card-hd"><h3>竹南產業園區</h3></div>
+          <div class="park-card-bd"><span>苗栗縣</span></div>
+          <span class="park-card-ft">▶ 前往園區頁面</span>
+        </a><a href="park-tongluo.html" class="park-card">
+          <div class="park-card-hd"><h3>銅鑼產業園區</h3></div>
+          <div class="park-card-bd"><span>苗栗縣</span></div>
+          <span class="park-card-ft">▶ 前往園區頁面</span>
+        </a><a href="park-pitou.html" class="park-card">
+          <div class="park-card-hd"><h3>埤頭產業園區</h3></div>
+          <div class="park-card-bd"><span>彰化縣</span></div>
+          <span class="park-card-ft">▶ 前往園區頁面</span>
+        </a><a href="park-shetou.html" class="park-card">
+          <div class="park-card-hd"><h3>社頭織襪產業園區</h3></div>
+          <div class="park-card-bd"><span>彰化縣</span></div>
+          <span class="park-card-ft">▶ 前往園區頁面</span>
+        </a></div>
+</section>
+
+<section class="sec">
+  <span class="sec-label">OTHER TEAM MEMBERS</span>
+  <h2 class="sec-title">其他業務窗口</h2>
+  <div class="sec-div"></div>
+  <div class="team-cards"><a href="person-zeng.html" class="tm-card">
+        <div class="tm-av"><img src="photo-zeng.jpg" alt="曾甄茹"></div>
+        <div><div class="tm-n">曾甄茹</div><div class="tm-r">業務經理</div></div>
+      </a><a href="person-luo.html" class="tm-card">
+        <div class="tm-av"><img src="photo-luo.jpg" alt="羅長庚"></div>
+        <div><div class="tm-n">羅長庚</div><div class="tm-r">業務經理</div></div>
+      </a><a href="person-chen.html" class="tm-card">
+        <div class="tm-av"><img src="photo-chen.jpg" alt="陳仁奕"></div>
+        <div><div class="tm-n">陳仁奕</div><div class="tm-r">業務經理</div></div>
+      </a><a href="person-li.html" class="tm-card">
+        <div class="tm-av"><img src="photo-li.jpg" alt="李武燦"></div>
+        <div><div class="tm-n">李武燦</div><div class="tm-r">業務經理</div></div>
+      </a><a href="person-liu.html" class="tm-card">
+        <div class="tm-av"><img src="photo-liu.jpg" alt="劉佳穎"></div>
+        <div><div class="tm-n">劉佳穎</div><div class="tm-r">業務經理</div></div>
+      </a></div>
+</section>
+
+<section class="cta-sec">
+  <h2>想直接聯絡張現傑？</h2>
+  <p>歡迎來電詢問，我們提供專業評估與完整服務</p>
+  <div class="cta-btns">
+    <a href="tel:0953909777" class="btn-gold">立即致電 0953-909-777</a>
+    <a href="index.html" class="btn-white">← 返回首頁</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 瑞禾不動產經紀股份有限公司（RUIHE Real Estate）・中臺灣工業不動產專業服務</p>
+  <p>臺中市南屯區益豐路四段91號 ｜ Tel: 04-2380-3560 ｜ <a href="index.html">回到首頁</a></p>
+</footer>
+
+</body>
+</html>

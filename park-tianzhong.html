@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>田中產業園區廠房廠地｜瑞禾不動產</title>
+<title>田中產業園區廠房廠地｜瑞禾不動產經紀股份有限公司</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -99,7 +99,7 @@ nav{position:sticky;top:0;z-index:200;background:#fff;height:72px;padding:0 5%;d
 .cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;}
 .ccard{background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);box-shadow:var(--sh);text-align:center;transition:transform .22s,box-shadow .22s;text-decoration:none;color:inherit;display:block;}
 .ccard:hover{transform:translateY(-3px);box-shadow:var(--shh);}
-.cpw{width:100%;aspect-ratio:3/4;background:linear-gradient(160deg,var(--gl),#c8dfc0);display:flex;align-items:center;justify-content:center;font-size:2.8rem;color:var(--p);}
+.cpw{width:100%;aspect-ratio:1/1;background:linear-gradient(160deg,var(--gl),#c8dfc0);display:flex;align-items:center;justify-content:center;font-size:2.8rem;color:var(--p);}
 .cpw img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
 .cbdy{padding:13px 11px 15px;}
 .cnm{font-size:0.95rem;font-weight:700;color:var(--p);margin-bottom:4px;}
@@ -109,8 +109,8 @@ nav{position:sticky;top:0;z-index:200;background:#fff;height:72px;padding:0 5%;d
 .cqr img{width:70px;height:70px;border-radius:6px;}
 .cqr span{font-size:0.6rem;color:#06C755;font-weight:700;}
 /* 其他園區 */
-.og{display:flex;gap:8px;flex-wrap:wrap;}
-.pj{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:9px 13px;text-decoration:none;color:inherit;transition:all .18s;display:flex;flex-direction:column;min-width:122px;}
+.og{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-bottom:20px;}
+.pj{display:inline-flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--bd);border-radius:8px;padding:8px 14px;text-decoration:none;color:inherit;font-size:0.82rem;transition:all .18s;min-width:0;}
 .pj:hover{background:var(--p);border-color:var(--p);}
 .pj:hover .pjn{color:#fff;}.pj:hover .pjc{color:var(--a);}
 .pjn{font-size:0.82rem;font-weight:700;color:var(--p);line-height:1.3;}
@@ -305,29 +305,6 @@ footer a{color:var(--gl);text-decoration:none;}footer a:hover{color:var(--a);}
 </section>
 
 <!-- ④ 負責窗口 -->
-<section class="sec alt" id="contacts">
-  <span class="sl">CONTACT WINDOW</span>
-  <h2 class="st">負責窗口</h2>
-  <div class="dv"></div>
-  <div class="cg">
-        <a href="person-luo.html" class="ccard">
-          <div class="cpw">▣</div>
-          <div class="cbdy">
-            <div class="cnm">羅長庚</div>
-            <div class="crl">業務經理</div>
-            <div class="cqr"><div class="cqr-ph">LINE</div><span>LINE 加好友</span></div>
-          </div>
-        </a>
-        <a href="person-li.html" class="ccard">
-          <div class="cpw">▣</div>
-          <div class="cbdy">
-            <div class="cnm">李武燦</div>
-            <div class="crl">業務經理</div>
-            <div class="cqr"><div class="cqr-ph">LINE</div><span>LINE 加好友</span></div>
-          </div>
-        </a></div>
-</section>
-
 <!-- ⑤ 其他園區 -->
 <section class="sec" id="other-parks">
   <span class="sl">OTHER PARKS</span>
@@ -355,6 +332,30 @@ footer a{color:var(--gl);text-decoration:none;}footer a:hover{color:var(--a);}
     <a href="park-zhushan.html" class="pj"><span class="pjn">竹山產業園區</span><span class="pjc">南投縣</span></a>
 </div>
   <a href="index.html" class="back-btn">← 返回主網頁</a>
+</section>
+
+<section class="sec alt" id="contacts">
+  <span class="sl">CONTACT WINDOW</span>
+  <h2 class="st">負責窗口</h2>
+  <div class="dv"></div>
+  <div class="cg">
+        <a href="person-luo.html" class="ccard">
+          <div class="cpw"><img src="photo-luo.jpg" alt="羅長庚" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+          <div class="cbdy">
+            <div class="cnm">羅長庚</div>
+            <div class="crl">業務經理</div>
+            <img src="qr-luo.jpg" alt="LINE QR" style="width:70px;height:70px;border-radius:6px;display:block;margin:0 auto 2px;">
+          </div>
+        </a>
+        <a href="person-li.html" class="ccard">
+          <div class="cpw"><img src="photo-li.jpg" alt="李武燦" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+          <div class="cbdy">
+            <div class="cnm">李武燦</div>
+            <div class="crl">業務經理</div>
+            <img src="qr-li.jpg" alt="LINE QR" style="width:70px;height:70px;border-radius:6px;display:block;margin:0 auto 2px;">
+          </div>
+        </a>
+      </div>
 </section>
 
 <footer>
