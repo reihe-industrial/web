@@ -86,6 +86,11 @@ nav{position:sticky;top:0;z-index:200;background:#fff;height:72px;padding:0 5%;d
 .cpr small{font-size:0.68rem;color:#999;font-weight:500;margin-left:2px;}
 .cbtn{display:block;text-align:center;background:var(--a);color:var(--p);font-weight:800;font-size:0.8rem;padding:9px;border-radius:8px;text-decoration:none;transition:background .18s;}
 .cbtn:hover{background:var(--ad);}
+.cbtns{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.cbtn-s{display:block;text-align:center;background:#fff;color:var(--p);font-weight:800;font-size:0.78rem;padding:9px 6px;border-radius:8px;text-decoration:none;transition:all .18s;border:1.5px solid var(--p);}
+.cbtn-s:hover{background:var(--p);color:#fff;}
+.cbtn-p{display:block;text-align:center;background:var(--a);color:var(--p);font-weight:800;font-size:0.78rem;padding:9px 6px;border-radius:8px;text-decoration:none;transition:background .18s;border:1.5px solid var(--a);}
+.cbtn-p:hover{background:var(--ad);}
 .cph{flex:0 0 calc(33.333% - 11px);background:#fff;border:1.5px dashed var(--gl);border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 18px;text-align:center;min-height:320px;}
 .cph p{font-size:0.8rem;color:#9ab09a;line-height:1.7;}
 .car-ctrl{display:flex;align-items:center;justify-content:space-between;margin-top:18px;}
@@ -137,7 +142,7 @@ footer a{color:var(--gl);text-decoration:none;}footer a:hover{color:var(--a);}
 </head>
 <body>
 <nav id="top">
-  <a href="index.html"><img src="logo.png" alt="瑞禾不動產" class="nav-logo"></a>
+  <a href="index.html"><img src="assets/common/logo.png" alt="瑞禾不動產" class="nav-logo"></a>
   <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
   <ul class="nav-menu" id="nm">
     <li><a href="#park-info">園區資訊</a></li>
@@ -202,10 +207,10 @@ footer a{color:var(--gl);text-decoration:none;}footer a:hover{color:var(--a);}
   <div class="dv"></div>
 
     <div class="gal">
-    <div class="gi"><img src="quanxing-1.png" alt="全興產業園區入口標誌" loading="lazy"></div>
-    <div class="gi"><img src="quanxing-2.png" alt="全興產業園區地理位置圖" loading="lazy"></div>
-    <div class="gi"><img src="quanxing-3.png" alt="全興產業園區區域圖" loading="lazy"></div>
-    <div class="gi"><img src="quanxing-4.png" alt="全興產業園區配置圖" loading="lazy"></div>
+    <div class="gi"><img src="assets/parks/quanxing/1.png" alt="全興產業園區入口標誌" loading="lazy"></div>
+    <div class="gi"><img src="assets/parks/quanxing/2.png" alt="全興產業園區地理位置圖" loading="lazy"></div>
+    <div class="gi"><img src="assets/parks/quanxing/3.png" alt="全興產業園區區域圖" loading="lazy"></div>
+    <div class="gi"><img src="assets/parks/quanxing/4.png" alt="全興產業園區配置圖" loading="lazy"></div>
     <div class="gi"><div class="gph"></div></div>
   </div>
   <p class="img-credit">圖片來源：<a href="https://land.bip.gov.tw" target="_blank" rel="noopener">台灣工業用地供給與服務資訊網</a></p>
@@ -309,7 +314,10 @@ footer a{color:var(--gl);text-decoration:none;}footer a:hover{color:var(--a);}
               <div class="cs2"><span class="csl">樓層</span><span class="csv">【樓層】</span></div>
             </div>
             <div class="cpr">NT$ 【金額】<small>元</small></div>
-            <a href="#contacts" class="cbtn">詢問此物件</a>
+            <div class="cbtns">
+              <a href="#" class="cbtn-s">詳細介紹</a>
+              <a href="#contacts" class="cbtn-p">詢問此物件</a>
+            </div>
           </div>
         </div>
         <div class="cc">
@@ -324,7 +332,10 @@ footer a{color:var(--gl);text-decoration:none;}footer a:hover{color:var(--a);}
               <div class="cs2"><span class="csl">月租金</span><span class="csv">面議</span></div>
             </div>
             <div class="cpr">月租 NT$ 【金額】<small>/月</small></div>
-            <a href="#contacts" class="cbtn">詢問此物件</a>
+            <div class="cbtns">
+              <a href="#" class="cbtn-s">詳細介紹</a>
+              <a href="#contacts" class="cbtn-p">詢問此物件</a>
+            </div>
           </div>
         </div>
         <div class="cph"><p>更多物件即將上架<br>歡迎致電詢問未公開物件</p></div>
@@ -347,19 +358,19 @@ footer a{color:var(--gl);text-decoration:none;}footer a:hover{color:var(--a);}
   <div class="dv"></div>
   <div class="cg">
         <a href="person-chen.html" class="ccard">
-          <div class="cpw"><img src="photo-chen.jpg" alt="陳仁奕" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+          <div class="cpw"><img src="assets/persons/chen/photo.jpg" alt="陳仁奕" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
           <div class="cbdy">
             <div class="cnm">陳仁奕</div>
             <div class="crl">業務經理</div>
-            <img src="qr-chen.jpg" alt="LINE QR" style="width:70px;height:70px;border-radius:6px;display:block;margin:0 auto 2px;">
+            <img src="assets/persons/chen/qr.jpg" alt="LINE QR" style="width:70px;height:70px;border-radius:6px;display:block;margin:0 auto 2px;">
           </div>
         </a>
         <a href="person-luo.html" class="ccard">
-          <div class="cpw"><img src="photo-luo.jpg" alt="羅長庚" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
+          <div class="cpw"><img src="assets/persons/luo/photo.jpg" alt="羅長庚" style="width:100%;height:100%;object-fit:cover;object-position:top"></div>
           <div class="cbdy">
             <div class="cnm">羅長庚</div>
             <div class="crl">業務經理</div>
-            <img src="qr-luo.jpg" alt="LINE QR" style="width:70px;height:70px;border-radius:6px;display:block;margin:0 auto 2px;">
+            <img src="assets/persons/luo/qr.jpg" alt="LINE QR" style="width:70px;height:70px;border-radius:6px;display:block;margin:0 auto 2px;">
           </div>
         </a>
       </div>
