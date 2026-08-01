@@ -351,5 +351,22 @@ document.getElementById('burger').addEventListener('click',()=>{document.getElem
   mkDots();sa();
 })();
 </script>
+
+<script>
+// 自動下架：檢查每張物件卡片的上架日期是否過期
+(function(){
+  var now = new Date();
+  document.querySelectorAll('.cc[data-listing-date]').forEach(function(card){
+    var d = card.getAttribute('data-listing-date');
+    var m = parseInt(card.getAttribute('data-months') || '12', 10);
+    if (!d) return;
+    var listDate = new Date(d);
+    var expireDate = new Date(listDate.getFullYear(), listDate.getMonth()+m, listDate.getDate());
+    if (now > expireDate) {
+      card.style.display = 'none';
+    }
+  });
+})();
+</script>
 </body>
 </html>
