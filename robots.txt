@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reihe-industrial.github.io/web/sitemap.xml
